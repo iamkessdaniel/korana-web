@@ -15,7 +15,10 @@ function ApprovalCard({ title, meta, body, primary, accent }: {
 }) {
   return (
     <div className={`${s.appCard} ${accent ? s.appCardAccent : ""}`}>
-      <div className={s.appMeta}>{meta}</div>
+      <div className={s.appHead}>
+        <span className={s.appMeta}>{meta}</span>
+        <span className={s.appTime}>·</span>
+      </div>
       <div className={s.appTitle}>{title}</div>
       <div className={s.appBody}>{body}</div>
       <div className={s.appActions}>

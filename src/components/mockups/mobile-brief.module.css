@@ -104,6 +104,12 @@
   border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
   background: linear-gradient(180deg, color-mix(in srgb, var(--accent-soft) 70%, var(--surface)) 0%, var(--surface) 100%);
 }
+.appHead {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.appTime { color: var(--ink-3); font-size: 10.5px; }
 .appMeta {
   font-size: 10.5px;
   font-family: var(--font-mono);

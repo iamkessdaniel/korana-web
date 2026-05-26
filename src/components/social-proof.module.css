@@ -89,7 +89,7 @@
 }
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
-  .cardWide { grid-column: auto; }
+  .cardWide { grid-column: auto !important; }
   .bar { grid-template-columns: repeat(2, 1fr); padding: 0; }
   .barItem { padding: 20px 22px; border-right: none; border-bottom: 1px solid var(--line-2); }
 }

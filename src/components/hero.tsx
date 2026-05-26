@@ -93,7 +93,7 @@ export function Hero() {
             <div className={s.briefHead}>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <div className={s.avatar}><Logo size={14} /></div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 1, alignItems: "flex-start" }}>
                   <div style={{ fontSize: 13, fontWeight: 600, color: "var(--ink)" }}>Friday Brief</div>
                   <div style={{ fontSize: 11.5, color: "var(--ink-3)" }}>May 23 · 4:30pm · auto-prepared</div>
                 </div>

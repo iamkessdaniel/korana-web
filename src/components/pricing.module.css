@@ -84,7 +84,7 @@
   margin: 6px 0 0;
 }
 .featured .tagline { color: color-mix(in srgb, var(--bg) 65%, var(--ink)); }
-.price { display: flex; align-items: baseline; gap: 2px; flex-wrap: wrap; }
+.price { display: flex; align-items: baseline; gap: 2px; }
 .priceCurrency { font-size: 22px; color: var(--ink-3); margin-right: 2px; }
 .priceN {
   font-family: var(--font-display);

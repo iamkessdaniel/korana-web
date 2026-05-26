@@ -45,6 +45,7 @@ export function WhatsappChat() {
         </div>
         <div className={s.actions}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17 10.5V7a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1v-3.5l4 4v-11l-4 4z" /></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 17l-3-2c-.4-.3-.9-.3-1.3 0l-2 1.4c-.3.2-.7.2-1 .1-1.5-.6-3-2.1-3.6-3.6-.1-.3-.1-.7.1-1l1.4-2c.3-.4.3-.9 0-1.3l-2-3c-.4-.6-1.2-.7-1.7-.3l-2 1.5c-1.5 1.1-1.4 3.3.2 5.4 1.6 2.1 5.2 5.7 7.3 7.3 2.1 1.6 4.3 1.7 5.4.2l1.5-2c.4-.5.3-1.3-.3-1.7z"/></svg>
           <svg width="4" height="20" viewBox="0 0 4 20" fill="currentColor"><circle cx="2" cy="4" r="2" /><circle cx="2" cy="10" r="2" /><circle cx="2" cy="16" r="2" /></svg>
         </div>
       </div>
