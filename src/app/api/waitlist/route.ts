@@ -20,27 +20,25 @@ export async function POST(req: NextRequest) {
     const results: string[] = [];
 
     // 1. Send email notification via SMTP
-    if (SMTP_USER && SMTP_PASS) {
-      try {
-        const transport = nodemailer.createTransport({
-          host: SMTP_HOST,
-          port: SMTP_PORT,
-          secure: SMTP_PORT === 465,
-          auth: { user: SMTP_USER, pass: SMTP_PASS },
-          tls: { rejectUnauthorized: false },
-        });
+    try {
+      const transport = nodemailer.createTransport({
+        host: SMTP_HOST,
+        port: SMTP_PORT,
+        secure: SMTP_PORT === 465,
+        ...(SMTP_USER && SMTP_PASS ? { auth: { user: SMTP_USER, pass: SMTP_PASS } } : {}),
+        tls: { rejectUnauthorized: false },
+      });
 
-        await transport.sendMail({
-          from: `"Korana Waitlist" <${SMTP_USER}>`,
-          to: NOTIFY_TO,
-          subject: `New waitlist signup: ${email}`,
-          text: `New early access request:\n\nEmail: ${email}\nTime: ${timestamp}\n`,
-          html: `<h2>New early access request</h2><p><strong>Email:</strong> ${email}</p><p><strong>Time:</strong> ${timestamp}</p>`,
-        });
-        results.push("email");
-      } catch (e) {
-        console.error("SMTP error:", e);
-      }
+      await transport.sendMail({
+        from: `"Korana Waitlist" <waitlist@korana.run>`,
+        to: NOTIFY_TO,
+        subject: `New waitlist signup: ${email}`,
+        text: `New early access request:\n\nEmail: ${email}\nTime: ${timestamp}\n`,
+        html: `<h2>New early access request</h2><p><strong>Email:</strong> ${email}</p><p><strong>Time:</strong> ${timestamp}</p>`,
+      });
+      results.push("email");
+    } catch (e) {
+      console.error("SMTP error:", e);
     }
 
     // 2. Append to Google Sheet via Apps Script webhook
