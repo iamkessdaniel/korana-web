@@ -1,0 +1,93 @@
+.ch { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.head { max-width: 740px; margin-bottom: 40px; }
+.h2 { font-size: clamp(40px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.sub { margin-top: 22px; color: var(--ink-2); font-size: 17.5px; max-width: 60ch; }
+.tabs {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+  margin-bottom: 36px;
+  box-shadow: var(--shadow-sm);
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-3);
+  transition: all 160ms ease;
+}
+.tab:hover { color: var(--ink); }
+.tabActive {
+  background: var(--ink);
+  color: var(--bg);
+}
+.stage {
+  position: relative;
+  min-height: 580px;
+}
+.pane {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 48px;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  transition: opacity 320ms ease;
+}
+.paneOn {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  animation: fadeUp 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.text { padding: 8px 0; }
+.paneH {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+.paneP {
+  font-size: 16.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.bullets li svg {
+  color: var(--accent);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.visual { display: flex; justify-content: center; align-items: center; }
+.visualWeb { width: 100%; }
+.visualMobile, .visualWa { padding: 20px 0; }
+
+@media (max-width: 1080px) {
+  .pane { grid-template-columns: 1fr; gap: 36px; }
+}
