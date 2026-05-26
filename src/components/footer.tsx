@@ -1,4 +1,5 @@
-import { Logo, Arrow } from "./icons";
+import { Logo } from "./icons";
+import { CtaForm } from "./cta-form";
 import s from "./footer.module.css";
 
 export function Footer() {
@@ -9,7 +10,7 @@ export function Footer() {
         <div className={`container ${s.ctaInner}`}>
           <div className={s.ctaEyebrow}>
             <span className="pulse-dot" />
-            <span>Now accepting founders for Q3 onboarding</span>
+            <span>One AI operator. The work of five people.</span>
           </div>
           <h2 className={`display ${s.ctaH2}`}>
             Spend your time<br />
@@ -19,13 +20,7 @@ export function Footer() {
             Let Korana run the rest. The work that used to eat your evenings finishes itself in the background.
           </p>
           <div className={s.ctaForm}>
-            <div className={s.ctaInput}>
-              <input placeholder="you@yourcompany.com" type="email" />
-              <button className="btn btn-primary">
-                Request access
-                <Arrow size={14} />
-              </button>
-            </div>
+            <CtaForm />
             <div style={{ fontSize: 12.5, color: "var(--ink-3)", marginTop: 14, fontFamily: "var(--font-mono)" }}>
               14-day trial · no credit card · WhatsApp setup in 30 min
             </div>
