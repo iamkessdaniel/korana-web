@@ -1,6 +1,16 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "outDir": "./dist",
     "noEmit": true,
     "jsx": "preserve",
@@ -19,6 +29,7 @@
     "declarationMap": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "noUncheckedIndexedAccess": true,
     "allowJs": true
   },
   "include": [
