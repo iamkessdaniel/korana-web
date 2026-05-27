@@ -6,6 +6,7 @@ import s from "./nav.module.css";
 
 export function MailNav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -14,9 +15,33 @@ export function MailNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
       <div className={`container ${s.inner}`}>
+        {/* Hamburger — mobile only */}
+        <button
+          className={s.burger}
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
+        </button>
+
+        {/* Brand — desktop only */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <a href="/" className={s.brand} aria-label="Korana home">
             <span className={s.mark} aria-hidden>
@@ -24,22 +49,7 @@ export function MailNav() {
             </span>
             <span className={s.wordmark}>korana</span>
           </a>
-          <span
-            style={{
-              fontSize: 11,
-              fontFamily: "var(--font-mono)",
-              fontWeight: 500,
-              color: "var(--accent)",
-              background: "var(--accent-soft)",
-              padding: "3px 8px",
-              borderRadius: 4,
-              letterSpacing: "0.04em",
-              textTransform: "uppercase",
-              lineHeight: 1,
-            }}
-          >
-            mail
-          </span>
+          <span className={s.mailBadge}>mail</span>
         </div>
 
         <nav className={s.links}>
@@ -50,12 +60,37 @@ export function MailNav() {
         </nav>
 
         <div className={s.actions}>
-          <a href="/" className={s.link} style={{ fontSize: 13, display: "inline-flex", alignItems: "center", gap: 4 }}>
+          <a href="/" className={`${s.link} ${s.backLink}`}>
             &larr; korana.ai
           </a>
           <a href="#cta" className="btn btn-primary btn-sm">
             Get a mailbox
             <Arrow size={14} />
+          </a>
+        </div>
+      </div>
+
+      {/* Mobile drawer */}
+      {menuOpen && <div className={s.overlay} onClick={closeMenu} />}
+      <div className={`${s.drawer} ${menuOpen ? s.drawerOpen : ""}`}>
+        <a href="/" className={s.drawerBrand}>
+          <span className={s.mark} aria-hidden>
+            <Logo size={24} />
+          </span>
+          <span className={s.wordmark}>korana</span>
+          <span className={s.mailBadge}>mail</span>
+        </a>
+
+        <div className={s.drawerLinks}>
+          <a href="#how" className={s.drawerLink} onClick={closeMenu}>How it works</a>
+          <a href="#features" className={s.drawerLink} onClick={closeMenu}>Features</a>
+          <a href="#pricing" className={s.drawerLink} onClick={closeMenu}>Pricing</a>
+          <a href="#faq" className={s.drawerLink} onClick={closeMenu}>FAQ</a>
+        </div>
+
+        <div className={s.drawerLinks} style={{ borderTop: "1px solid var(--line-2)", marginTop: 8, paddingTop: 16 }}>
+          <a href="/" className={s.drawerLink} onClick={closeMenu}>
+            &larr; korana.ai
           </a>
         </div>
       </div>

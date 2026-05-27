@@ -58,6 +58,24 @@
   gap: 16px;
 }
 .login { font-size: 14px; }
+.backLink {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.mailBadge {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
 
 /* Hamburger button — hidden on desktop */
 .burger {
@@ -174,6 +192,8 @@
   .links { display: none; }
   .login { display: none; }
   .brand { display: none; }
+  .backLink { display: none; }
+  .mailBadge { display: none; }
   .burger { display: flex; }
   .inner { height: 56px; gap: 12px; }
 
