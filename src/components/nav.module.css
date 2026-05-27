@@ -191,7 +191,7 @@
 @media (max-width: 880px) {
   .links { display: none; }
   .login { display: none; }
-  .brand { display: none; }
+  .wordmark { display: none; }
   .backLink { display: none; }
   .mailBadge { display: none; }
   .burger { display: flex; }
@@ -240,6 +240,7 @@
     margin-bottom: 28px;
   }
   .drawerBrand .wordmark {
+    display: inline;
     font-size: 22px;
   }
 
