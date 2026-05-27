@@ -22,7 +22,7 @@ export function MailHero() {
         </h1>
 
         <p className={s.sub}>
-          AI triages, drafts replies in your voice, and handles the rest — so your inbox becomes a decision center, not a stress box.
+          AI sorts your email, drafts replies in your voice, and handles the rest — so your inbox becomes a decision center, not a stress box.
         </p>
 
         <div className={s.actions}>
