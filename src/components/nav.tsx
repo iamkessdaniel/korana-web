@@ -7,6 +7,7 @@ import s from "./nav.module.css";
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const dropRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,9 +28,34 @@ export function Nav() {
     return () => document.removeEventListener("click", onClick);
   }, [showProducts]);
 
+  // Lock body scroll when menu open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
       <div className={`container ${s.inner}`}>
+        {/* Hamburger — mobile only */}
+        <button
+          className={s.burger}
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
+          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
+        </button>
+
+        {/* Brand — desktop only */}
         <a href="#" className={s.brand} aria-label="Korana home">
           <span className={s.mark} aria-hidden>
             <Logo size={28} />
@@ -83,6 +109,49 @@ export function Nav() {
             Request access
             <Arrow size={14} />
           </a>
+        </div>
+      </div>
+
+      {/* Mobile drawer */}
+      {menuOpen && <div className={s.overlay} onClick={closeMenu} />}
+      <div className={`${s.drawer} ${menuOpen ? s.drawerOpen : ""}`}>
+        <a href="#" className={s.drawerBrand} onClick={closeMenu}>
+          <span className={s.mark} aria-hidden>
+            <Logo size={24} />
+          </span>
+          <span className={s.wordmark}>korana</span>
+        </a>
+
+        <div className={s.drawerSection}>
+          <div className={s.drawerLabel}>Products</div>
+          <a href="#what" className={s.drawerItem} onClick={closeMenu}>
+            <div className={s.dropIcon}>
+              <Logo size={16} />
+            </div>
+            <div>
+              <div className={s.dropTitle}>AI Chief of Staff</div>
+              <div className={s.dropDesc}>Run your back office on autopilot</div>
+            </div>
+          </a>
+          <a href="/mail" className={s.drawerItem} onClick={closeMenu}>
+            <div className={s.dropIcon} style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+              <MailEnvelope size={15} />
+            </div>
+            <div>
+              <div className={s.dropTitle}>
+                AI Mail
+                <span className={s.dropNew}>New</span>
+              </div>
+              <div className={s.dropDesc}>Email that thinks, replies & decides</div>
+            </div>
+          </a>
+        </div>
+
+        <div className={s.drawerLinks}>
+          <a href="#channels" className={s.drawerLink} onClick={closeMenu}>Channels</a>
+          <a href="#pricing" className={s.drawerLink} onClick={closeMenu}>Pricing</a>
+          <a href="#faq" className={s.drawerLink} onClick={closeMenu}>FAQ</a>
+          <a href="#" className={s.drawerLink} onClick={closeMenu}>Sign in</a>
         </div>
       </div>
     </header>
