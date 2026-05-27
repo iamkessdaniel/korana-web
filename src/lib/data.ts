@@ -204,7 +204,7 @@ export const MAIL_PRICING_TIERS = [
     name: "Personal",
     tagline: "For individuals and freelancers",
     monthly: 1,
-    annual: 1,
+    annual: 10,
     cta: "Get a mailbox",
     ctaStyle: "ghost" as const,
     featured: false,
@@ -222,7 +222,7 @@ export const MAIL_PRICING_TIERS = [
     name: "Business",
     tagline: "For teams of any size",
     monthly: 1,
-    annual: 1,
+    annual: 10,
     perUnit: "/mailbox",
     cta: "Get started",
     ctaStyle: "primary" as const,
@@ -285,6 +285,14 @@ export const MAIL_TESTIMONIALS = [
     company: "consulting · 1 person",
     initial: "P",
     color: "#2c5d8a",
+  },
+  {
+    quote: "Our support inbox was a graveyard of unread threads. Korana cleared the backlog in a day, and now every customer hears back in under 10 minutes. Our CSAT went from 72 to 94.",
+    name: "James Okafor",
+    role: "CTO · Hexa Systems",
+    company: "devtools · 18 people",
+    initial: "J",
+    color: "#9c6611",
   },
 ];
 

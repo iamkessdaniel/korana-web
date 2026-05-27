@@ -21,7 +21,7 @@ export function MailSocialProof() {
 
         <div className={s.grid} style={{ marginTop: 32 }}>
           {MAIL_TESTIMONIALS.map((t, i) => (
-            <article className={`${s.card} ${i === 0 ? s.cardWide : ""}`} key={t.name}>
+            <article className={`${s.card} ${i === 0 || i === 3 ? s.cardWide : ""}`} key={t.name}>
               <div className={s.quote}>
                 <span className={`${s.mark} serif-italic`}>&ldquo;</span>
                 <p className={s.quoteText}>{t.quote}</p>

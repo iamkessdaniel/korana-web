@@ -12,8 +12,8 @@ const STEPS = [
   {
     n: "2",
     icon: <Sparkle size={20} />,
-    title: "AI reads every email",
-    desc: "Categorizes incoming mail, loads context from prior threads, and drafts a reply in your voice and tone.",
+    title: "Unleash the AI on your inbox",
+    desc: "Every message is triaged, context is loaded from prior threads, and a reply is drafted in your voice — before you even open it.",
   },
   {
     n: "3",

@@ -40,15 +40,21 @@ export function MailPricing() {
               <div className={s.price}>
                 {"customLabel" in t && t.customLabel ? (
                   <span className={`${s.priceN} serif-italic`}>{t.customLabel}</span>
+                ) : annual ? (
+                  <>
+                    <span className={s.priceCurrency}>$</span>
+                    <span className={s.priceN}>{t.annual}</span>
+                    <span className={s.pricePer}>/ yr{"perUnit" in t ? (t as { perUnit: string }).perUnit : ""}</span>
+                  </>
                 ) : (
                   <>
                     <span className={s.priceCurrency}>$</span>
-                    <span className={s.priceN}>{annual ? t.annual : t.monthly}</span>
+                    <span className={s.priceN}>{t.monthly}</span>
                     <span className={s.pricePer}>/ mo{"perUnit" in t ? (t as { perUnit: string }).perUnit : ""}</span>
                   </>
                 )}
                 {!("customLabel" in t && t.customLabel) && annual && (
-                  <div className={s.priceMeta}>billed annually · ${((annual ? t.annual : t.monthly) ?? 0) * 12} / yr</div>
+                  <div className={s.priceMeta}>save 20% vs monthly · $1/mo{"perUnit" in t ? (t as { perUnit: string }).perUnit : ""}</div>
                 )}
               </div>
 

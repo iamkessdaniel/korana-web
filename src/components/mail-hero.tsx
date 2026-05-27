@@ -17,14 +17,24 @@ export function MailHero() {
         </div>
 
         <h1 className={`display ${s.title}`}>
-          Email that thinks, replies,<br />
-          and <span className={`serif-italic ${s.titleEm}`}>decides.</span>
+          Email that thinks,<br />
+          replies, and <span className={`serif-italic ${s.titleEm}`}>decides.</span>
         </h1>
 
-        <p className={s.sub}>
-          AI drafts in your voice, categorizes every message, handles routine email autonomously.
-          Custom domain or forward from Gmail/Outlook. One dollar a month.
-        </p>
+        <div className={s.promises}>
+          <div className={s.promise}>
+            <span className={s.promiseDot} style={{ background: "var(--positive)" }} />
+            Zero inbox anxiety — AI triages and prioritizes every message
+          </div>
+          <div className={s.promise}>
+            <span className={s.promiseDot} style={{ background: "var(--accent)" }} />
+            Replies drafted in your voice — sent in under 8 minutes
+          </div>
+          <div className={s.promise}>
+            <span className={s.promiseDot} style={{ background: "var(--info)" }} />
+            Your domain, your rules — forward from Gmail or go all-in
+          </div>
+        </div>
 
         <div className={s.actions}>
           <a href="#cta" className="btn btn-primary btn-lg">

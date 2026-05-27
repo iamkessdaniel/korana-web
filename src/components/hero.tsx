@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Logo, Arrow, Phone, Web, Whatsapp, Inbox, Invoice, Calendar, Scale, Receipt } from "./icons";
 import { PhoneFrame } from "./mockups/phone-frame";
 import { MobileBrief } from "./mockups/mobile-brief";
@@ -28,7 +31,18 @@ const STATS = [
   { n: "6", l: "filings prepared" },
 ];
 
+const ROTATING_WORDS = ["every company.", "every founder.", "every startup.", "every team."];
+
 export function Hero() {
+  const [wordIdx, setWordIdx] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIdx((i) => (i + 1) % ROTATING_WORDS.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className={s.hero}>
       <div className="grid-bg" aria-hidden />
@@ -40,7 +54,16 @@ export function Hero() {
 
         <h1 className={`display ${s.title}`}>
           AI Chief of Staff for<br />
-          <span className={`serif-italic ${s.titleEm}`}>every company.</span>
+          <span className={s.rotateWrap}>
+            {ROTATING_WORDS.map((word, i) => (
+              <span
+                key={word}
+                className={`serif-italic ${s.titleEm} ${s.rotateWord} ${i === wordIdx ? s.rotateActive : ""}`}
+              >
+                {word}
+              </span>
+            ))}
+          </span>
         </h1>
 
         <p className={s.sub}>
