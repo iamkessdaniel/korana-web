@@ -46,6 +46,7 @@ export function Footer() {
                 <div className={s.ftColH}>Product</div>
                 <a href="#what">What it does</a>
                 <a href="#channels">Channels</a>
+                <a href="/mail">AI Mail</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#">Changelog</a>
               </div>

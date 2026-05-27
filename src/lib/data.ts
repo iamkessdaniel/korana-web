@@ -184,6 +184,137 @@ export const PRICING_TIERS = [
   },
 ];
 
+// --- AI Mail data ---
+
+export type MailFeatureIcon = "triage" | "draft" | "queue" | "priority" | "domain" | "forward" | "cos" | "privacy";
+
+export const MAIL_FEATURES = [
+  { icon: "triage" as const, title: "Smart triage", description: "Every incoming email is categorized: urgent, actionable, FYI, or noise. Your inbox shows what matters first." },
+  { icon: "draft" as const, title: "AI drafts", description: "Korana reads the thread, writes a reply in your voice, and queues it for approval. Most go out in under 8 minutes." },
+  { icon: "queue" as const, title: "Approval queue", description: "Routine replies send themselves. Important ones wait for your tap. You set the threshold, Korana respects it." },
+  { icon: "priority" as const, title: "Priority sorting", description: "VIP contacts, revenue threads, and time-sensitive requests float to the top automatically. Newsletters sink." },
+  { icon: "domain" as const, title: "Custom domain", description: "Use your own domain — you@yourcompany.com. Full DNS setup handled. SPF, DKIM, DMARC configured automatically." },
+  { icon: "forward" as const, title: "Gmail/Outlook forwarding", description: "Keep your existing email. Forward a copy to Korana and it handles everything. No migration required." },
+  { icon: "cos" as const, title: "Chief of Staff sync", description: "Invoices, meeting requests, and task updates in your inbox route directly into Korana CoS workflows." },
+  { icon: "privacy" as const, title: "Privacy-first hosting", description: "Your mail lives on dedicated infrastructure. No ads, no scanning, no third-party access. Encrypted at rest and in transit." },
+];
+
+export const MAIL_PRICING_TIERS = [
+  {
+    name: "Personal",
+    tagline: "For individuals and freelancers",
+    monthly: 1,
+    annual: 1,
+    cta: "Get a mailbox",
+    ctaStyle: "ghost" as const,
+    featured: false,
+    features: [
+      "1 mailbox",
+      "AI triage & categorization",
+      "AI draft replies",
+      "Custom domain",
+      "Gmail/Outlook forwarding",
+      "IMAP/SMTP access",
+      "10 GB storage",
+    ],
+  },
+  {
+    name: "Business",
+    tagline: "For teams of any size",
+    monthly: 1,
+    annual: 1,
+    perUnit: "/mailbox",
+    cta: "Get started",
+    ctaStyle: "primary" as const,
+    featured: true,
+    badge: "Most popular",
+    features: [
+      "Unlimited mailboxes",
+      "Everything in Personal",
+      "Shared inboxes",
+      "Approval routing",
+      "Chief of Staff integration",
+      "50 GB storage / mailbox",
+      "Audit log",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Enterprise",
+    tagline: "For regulated industries & scale",
+    monthly: null,
+    annual: null,
+    customLabel: "Custom",
+    cta: "Talk to sales",
+    ctaStyle: "ghost" as const,
+    featured: false,
+    features: [
+      "Everything in Business",
+      "SSO / SAML",
+      "Data residency options",
+      "DPA included",
+      "99.99% uptime SLA",
+      "Dedicated support engineer",
+      "Custom integrations",
+      "Volume pricing",
+    ],
+  },
+];
+
+export const MAIL_TESTIMONIALS = [
+  {
+    quote: "I used to spend an hour every morning sorting email. Now I glance at the approval queue for 3 minutes and I'm done. Korana drafted better replies than I would have.",
+    name: "Sara Kim",
+    role: "Founder · Anchor Studio",
+    company: "branding agency · 6 people",
+    initial: "S",
+    color: "#c14a26",
+  },
+  {
+    quote: "We moved 14 team mailboxes to Korana. Support response time dropped from 4 hours to 8 minutes. At $1 per mailbox. It's absurd.",
+    name: "Diego Alvarez",
+    role: "Head of Ops · Stratos",
+    company: "logistics SaaS · 30 people",
+    initial: "D",
+    color: "#2d6b4e",
+  },
+  {
+    quote: "The forwarding setup took 2 minutes. I kept Gmail as a backup and Korana handles everything. I don't even open Gmail anymore.",
+    name: "Priya Nair",
+    role: "Solo founder",
+    company: "consulting · 1 person",
+    initial: "P",
+    color: "#2c5d8a",
+  },
+];
+
+export const MAIL_FAQS = [
+  {
+    q: "Does Korana Mail replace Gmail or Outlook?",
+    a: "It can, but it doesn't have to. You can use Korana as your primary email host with IMAP/SMTP, or keep Gmail/Outlook and forward a copy to Korana. Either way, the AI reads, categorizes, and drafts replies. Most users keep their existing email and let Korana handle the work behind the scenes.",
+  },
+  {
+    q: "Is this real IMAP/SMTP email hosting?",
+    a: "Yes. Korana Mail runs on a full-featured mail server with standard IMAP and SMTP. You can connect any email client — Apple Mail, Thunderbird, Outlook — just like any other email provider. The AI layer runs on top, not instead of the protocol.",
+  },
+  {
+    q: "What does 'autonomous' actually mean?",
+    a: "Korana reads every inbound email, categorizes it, and drafts a reply. For routine messages — confirmations, scheduling, simple questions — it sends the reply automatically. For anything important, nuanced, or new, it queues a draft for your approval. You set the threshold for what counts as routine.",
+  },
+  {
+    q: "How does it learn my tone and voice?",
+    a: "When you first connect, Korana reads your last 90 days of sent email to learn how you write — your greetings, sign-offs, formality level, common phrases. After that, every edit you make to a draft teaches it more. Most users stop editing after the first week.",
+  },
+  {
+    q: "Is my email private?",
+    a: "Your email data is encrypted at rest and in transit, stored on dedicated infrastructure, and never used to train AI models. No ads, no third-party scanning. Enterprise customers get data residency options and a DPA. We treat email like the most sensitive data you have — because it is.",
+  },
+  {
+    q: "How does it integrate with Korana Chief of Staff?",
+    a: "Emails about invoices, meetings, tasks, and approvals are automatically detected and routed into the corresponding CoS workflow. An invoice attachment becomes a payable. A meeting request becomes a calendar event. A task mentioned in an email becomes a tracked item. No forwarding rules or manual setup — it just works.",
+  },
+];
+
 export const FAQS = [
   {
     q: "Is Korana an agent, an app, or a human team?",
