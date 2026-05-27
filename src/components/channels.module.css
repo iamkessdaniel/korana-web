@@ -86,7 +86,8 @@
 }
 .visual { display: flex; justify-content: center; align-items: center; }
 .visualWeb { width: 100%; }
-.visualMobile, .visualWa { padding: 20px 0; }
+.visualMobile { padding: 20px 0; }
+.visualDesktop { width: 100%; }
 
 @media (max-width: 1080px) {
   .pane { grid-template-columns: 1fr; gap: 36px; }

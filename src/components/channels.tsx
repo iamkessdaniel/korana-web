@@ -1,20 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { Web, Phone, Whatsapp, CheckSm } from "./icons";
+import { Web, Phone, Desktop, CheckSm } from "./icons";
 import { PhoneFrame } from "./mockups/phone-frame";
 import { MobileBrief } from "./mockups/mobile-brief";
-import { WhatsappChat } from "./mockups/whatsapp-chat";
+import { DesktopChat } from "./mockups/desktop-chat";
 import { WebDashboard } from "./mockups/web-dashboard";
 import { ScaledFit } from "./mockups/scaled-fit";
 import s from "./channels.module.css";
 
-type Channel = "web" | "mobile" | "wa";
+type Channel = "web" | "mobile" | "desktop";
 
 const TABS: { id: Channel; icon: React.ReactNode; label: string }[] = [
-  { id: "web", icon: <Web size={15} />, label: "Web app" },
+  { id: "web", icon: <Web size={15} />, label: "Web" },
   { id: "mobile", icon: <Phone size={15} />, label: "Mobile" },
-  { id: "wa", icon: <Whatsapp size={15} />, label: "WhatsApp" },
+  { id: "desktop", icon: <Desktop size={15} />, label: "Desktop" },
 ];
 
 export function Channels() {
@@ -29,7 +29,7 @@ export function Channels() {
             Wherever you work, <span className="serif-italic">Korana shows up.</span>
           </h2>
           <p className={s.sub}>
-            Reply on WhatsApp between meetings. Approve from your phone in the cab.
+            Get updates in your favorite chat apps. Approve from your phone in the cab.
             Open the full dashboard at your desk. Same chief of staff, same context, every surface.
           </p>
         </div>
@@ -92,26 +92,26 @@ export function Channels() {
             </div>
           </div>
 
-          {/* WhatsApp */}
-          <div className={`${s.pane} ${active === "wa" ? s.paneOn : ""}`}>
+          {/* Desktop */}
+          <div className={`${s.pane} ${active === "desktop" ? s.paneOn : ""}`}>
             <div className={s.text}>
-              <h3 className={s.paneH}><span className="serif-italic">Just chat.</span> Get it done.</h3>
+              <h3 className={s.paneH}><span className="serif-italic">Always there,</span> never in the way.</h3>
               <p className={s.paneP}>
-                Korana speaks WhatsApp like a real chief of staff would — short messages,
-                clear asks, ready drafts. Reply with a thumbs up, a &ldquo;send it&rdquo;, or your own words.
-                Nothing to install, no new app to learn.
+                A floating AI assistant that lives on your desktop. Ask anything with voice or text,
+                get instant updates across all your channels. No tab-switching, no context-switching —
+                just speak and it&apos;s done.
               </p>
               <ul className={s.bullets}>
-                <li><CheckSm size={11} /> Verified business number, end-to-end encrypted</li>
-                <li><CheckSm size={11} /> Voice notes, photos, documents — all understood</li>
-                <li><CheckSm size={11} /> Approve sends, signs, payments inline</li>
-                <li><CheckSm size={11} /> Daily summary at 8am, weekly brief Friday 4:30pm</li>
+                <li><CheckSm size={11} /> Voice mode — speak instructions, hear updates back</li>
+                <li><CheckSm size={11} /> Cross-app updates: Slack, email, WhatsApp in one thread</li>
+                <li><CheckSm size={11} /> Approve, delegate, or reschedule inline</li>
+                <li><CheckSm size={11} /> Always-on — runs quietly until you need it</li>
               </ul>
             </div>
-            <div className={`${s.visual} ${s.visualWa}`}>
-              <PhoneFrame>
-                <WhatsappChat />
-              </PhoneFrame>
+            <div className={`${s.visual} ${s.visualDesktop}`}>
+              <ScaledFit width={720} height={520}>
+                <DesktopChat />
+              </ScaledFit>
             </div>
           </div>
         </div>

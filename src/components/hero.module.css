@@ -235,4 +235,12 @@
 @media (max-width: 1100px) {
   .displayInner { grid-template-columns: 1fr; }
   .phoneWrap { display: none; }
+  .display { padding-bottom: 60px; }
+}
+@media (max-width: 600px) {
+  .display { padding-left: 16px; padding-right: 16px; }
+  .statGrid { grid-template-columns: repeat(2, 1fr); }
+  .statGrid > :nth-child(2) { border-left: 1px solid var(--line-2); }
+  .statGrid > :nth-child(3) { border-left: 0; border-top: 1px solid var(--line-2); padding-top: 12px; }
+  .statGrid > :nth-child(4) { border-top: 1px solid var(--line-2); padding-top: 12px; }
 }

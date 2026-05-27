@@ -254,6 +254,17 @@ export function Search({ size = 16 }: IconProps) {
   );
 }
 
+export function Desktop({ size = 18 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="3" y="4" width="18" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+      <path d="M8 21h8M12 17v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M16 10h2.5v3H16z" fill="currentColor" opacity=".5" rx="1"/>
+      <path d="M17.2 10.8l.8.7-.8.7" stroke="currentColor" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
 export function Sparkle({ size = 16 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden>
