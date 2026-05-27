@@ -1,7 +1,7 @@
 .demo { background: var(--bg); }
 .head { max-width: 720px; margin: 0 auto 40px; text-align: center; }
-.h2 { font-size: clamp(40px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
-.sub { margin-top: 22px; color: var(--ink-2); font-size: 17.5px; }
+.h2 { font-size: clamp(32px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.sub { margin-top: 22px; color: var(--ink-2); font-size: clamp(15px, 1.3vw, 17.5px); }
 .tabs {
   display: inline-flex;
   background: var(--surface);
@@ -173,4 +173,11 @@
 @media (max-width: 900px) {
   .floatWidget { display: none; }
   .stageWrap { padding: 0; }
+  .head { margin-bottom: 28px; }
+  .stage { min-height: 280px; }
+}
+@media (max-width: 600px) {
+  .head { margin-bottom: 24px; }
+  .sub { margin-top: 16px; }
+  .tabs { margin-bottom: 24px; }
 }

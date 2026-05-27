@@ -1,6 +1,6 @@
 .banner { background: var(--bg); }
 .head { text-align: center; margin-bottom: 48px; }
-.h2 { font-size: clamp(40px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.h2 { font-size: clamp(32px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

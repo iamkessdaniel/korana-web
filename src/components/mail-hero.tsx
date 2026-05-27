@@ -21,20 +21,9 @@ export function MailHero() {
           replies, and <span className={`serif-italic ${s.titleEm}`}>decides.</span>
         </h1>
 
-        <div className={s.promises}>
-          <div className={s.promise}>
-            <span className={s.promiseDot} style={{ background: "var(--positive)" }} />
-            Zero inbox anxiety — AI triages and prioritizes every message
-          </div>
-          <div className={s.promise}>
-            <span className={s.promiseDot} style={{ background: "var(--accent)" }} />
-            Replies drafted in your voice — sent in under 8 minutes
-          </div>
-          <div className={s.promise}>
-            <span className={s.promiseDot} style={{ background: "var(--info)" }} />
-            Your domain, your rules — forward from Gmail or go all-in
-          </div>
-        </div>
+        <p className={s.sub}>
+          AI triages, drafts replies in your voice, and handles the rest — so your inbox becomes a decision center, not a stress box.
+        </p>
 
         <div className={s.actions}>
           <a href="#cta" className="btn btn-primary btn-lg">

@@ -5,7 +5,7 @@
 }
 .head { max-width: 760px; }
 .h2 {
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(32px, 5vw, 64px);
   margin: 18px 0 0;
   line-height: 1.05;
 }

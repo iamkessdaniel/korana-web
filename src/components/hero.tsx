@@ -67,10 +67,7 @@ export function Hero() {
         </h1>
 
         <p className={s.sub}>
-          Run your company the AI-native way. Korana is the operating brain behind founders who
-          build lean — bookkeeping, invoicing, tax, customer messages, sales follow-ups, scheduling,
-          weekly reporting, all handled by one operator in the background. Skip the 5&ndash;10
-          hires. You approve what matters.
+          One AI operator handles bookkeeping, invoicing, tax, customer messages, follow-ups, and reporting. You just approve what matters.
         </p>
 
         <div className={s.actions}>
