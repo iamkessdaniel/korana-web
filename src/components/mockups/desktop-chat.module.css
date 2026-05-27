@@ -38,7 +38,7 @@
 /* Background workspace (faded) */
 .workspace {
   padding: 24px;
-  opacity: 0.35;
+  opacity: 0.3;
 }
 .fakeNav {
   display: flex;
@@ -77,129 +77,10 @@
   border: 1px solid var(--line);
 }
 
-/* Floating chat widget */
-.widget {
+/* Chat widget positioning — prominent, centered */
+.widgetWrap {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  background: var(--surface);
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  box-shadow: 0 16px 48px rgba(20, 19, 15, 0.18), 0 2px 8px rgba(20, 19, 15, 0.08);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* Widget header */
-.widgetHead {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--line-2);
-}
-.widgetAvatar {
-  width: 30px;
-  height: 30px;
-  background: var(--ink);
-  color: var(--bg);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.widgetName {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.onlineDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--positive);
-}
-.widgetSub {
-  font-size: 11px;
-  color: var(--ink-3);
-}
-
-/* Chat messages */
-.messages {
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
-.msgBot {
-  background: var(--bg-2);
-  border-radius: 12px 12px 12px 4px;
-  padding: 10px 14px;
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--ink);
-  max-width: 88%;
-  align-self: flex-start;
-}
-.msgUser {
-  background: var(--ink);
-  color: var(--bg);
-  border-radius: 12px 12px 4px 12px;
-  padding: 10px 14px;
-  font-size: 13px;
-  line-height: 1.45;
-  max-width: 75%;
-  align-self: flex-end;
-}
-.msgTime {
-  font-size: 10px;
-  color: var(--ink-3);
-  align-self: flex-end;
-  margin-top: -4px;
-}
-
-/* Input bar */
-.inputBar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border-top: 1px solid var(--line-2);
-}
-.sparkle {
-  color: var(--accent);
-  flex-shrink: 0;
-}
-.inputField {
-  flex: 1;
-  font-size: 12.5px;
-  color: var(--ink-3);
-}
-.micBtn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--bg-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ink-2);
-  flex-shrink: 0;
-}
-.sendBtn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  flex-shrink: 0;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
 }

@@ -1,6 +1,7 @@
 import { Logo, Arrow, Phone, Web, Whatsapp, Inbox, Invoice, Calendar, Scale, Receipt } from "./icons";
 import { PhoneFrame } from "./mockups/phone-frame";
 import { MobileBrief } from "./mockups/mobile-brief";
+import { ChatWidget } from "./mockups/chat-widget";
 import s from "./hero.module.css";
 
 const ACTIVITY = [
@@ -147,6 +148,11 @@ export function Hero() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Floating chat widget */}
+          <div className={s.chatFloat}>
+            <ChatWidget />
           </div>
         </div>
       </div>
