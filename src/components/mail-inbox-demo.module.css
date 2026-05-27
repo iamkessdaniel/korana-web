@@ -47,3 +47,130 @@
   position: relative;
   animation: fadeUp 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
+
+/* Stage wrapper — centers mockup, provides space for floating widgets */
+.stageWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px 40px;
+}
+
+/* ── Floating widgets ── */
+.floatWidget {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  padding: 12px 14px;
+  z-index: 10;
+  opacity: 0;
+  animation: floatIn 600ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.floatWidget:nth-child(2) { animation-delay: 200ms; }
+.floatWidget:nth-child(3) { animation-delay: 400ms; }
+.floatWidget:nth-child(4) { animation-delay: 600ms; }
+.floatWidget:nth-child(5) { animation-delay: 800ms; }
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fw1 { top: -24px; right: -36px; width: 240px; }
+.fw2 { bottom: -20px; left: -28px; width: 260px; }
+.fw3 { top: 40px; left: -20px; width: 200px; }
+.fw4 { bottom: 24px; right: -24px; width: 210px; }
+
+.fwLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+  font-weight: 550;
+}
+.fwRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-2);
+  padding: 3px 0;
+}
+.fwIcon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.fwText {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fwMeta {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  flex-shrink: 0;
+}
+.fwChip {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  padding: 1px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.fwDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* AI Active pill — inline layout */
+.fwPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fwPillLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--positive);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.fwPillDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--positive);
+  animation: aiPulse 2s ease-in-out infinite;
+}
+@keyframes aiPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.fwPillStats {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .floatWidget { display: none; }
+  .stageWrap { padding: 0; }
+}
