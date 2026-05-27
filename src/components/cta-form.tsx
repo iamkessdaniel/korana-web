@@ -43,15 +43,14 @@ export function CtaForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div style={{ display: "flex", alignItems: "center", background: "var(--surface)", borderRadius: "var(--r-pill)", border: "1px solid var(--line)", padding: "5px 5px 5px 22px", maxWidth: 440 }}>
+    <form onSubmit={handleSubmit} className="cta-form-wrap">
+      <div className="cta-pill">
         <input
           placeholder="you@yourcompany.com"
           type="email"
           value={email}
           onChange={(e) => { setEmail(e.target.value); if (state === "error") setState("idle"); }}
           required
-          style={{ flex: 1, border: "none", outline: "none", background: "transparent", fontSize: 14.5 }}
         />
         <button className="btn btn-primary" type="submit" disabled={state === "loading"}>
           {state === "loading" ? "Sending..." : "Request access"}
