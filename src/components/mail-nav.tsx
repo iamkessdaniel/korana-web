@@ -16,68 +16,63 @@ export function MailNav() {
   }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
-      <div className={`container ${s.inner}`}>
-        {/* Hamburger — mobile only */}
-        <button
-          className={s.burger}
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
-        </button>
+    <>
+      <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
+        <div className={`container ${s.inner}`}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <a href="/" className={s.brand} aria-label="Korana home">
+              <span className={s.mark} aria-hidden>
+                <Logo size={28} />
+              </span>
+              <span className={s.wordmark}>korana</span>
+            </a>
+            <span className={s.mailBadge}>mail</span>
+          </div>
 
-        {/* Brand — desktop only */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <a href="/" className={s.brand} aria-label="Korana home">
-            <span className={s.mark} aria-hidden>
-              <Logo size={28} />
-            </span>
-            <span className={s.wordmark}>korana</span>
-          </a>
-          <span className={s.mailBadge}>mail</span>
+          <nav className={s.links}>
+            <a href="#how" className={s.link}>How it works</a>
+            <a href="#features" className={s.link}>Features</a>
+            <a href="#pricing" className={s.link}>Pricing</a>
+            <a href="#faq" className={s.link}>FAQ</a>
+          </nav>
+
+          <div className={s.actions}>
+            <a href="/" className={`${s.link} ${s.backLink}`}>
+              &larr; korana.ai
+            </a>
+            <a href="#cta" className="btn btn-primary btn-sm">
+              Get a mailbox
+              <Arrow size={14} />
+            </a>
+            <button
+              className={s.burger}
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Menu"
+              aria-expanded={menuOpen}
+            >
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
+            </button>
+          </div>
         </div>
+      </header>
 
-        <nav className={s.links}>
-          <a href="#how" className={s.link}>How it works</a>
-          <a href="#features" className={s.link}>Features</a>
-          <a href="#pricing" className={s.link}>Pricing</a>
-          <a href="#faq" className={s.link}>FAQ</a>
-        </nav>
-
-        <div className={s.actions}>
-          <a href="/" className={`${s.link} ${s.backLink}`}>
-            &larr; korana.ai
-          </a>
-          <a href="#cta" className="btn btn-primary btn-sm">
-            Get a mailbox
-            <Arrow size={14} />
-          </a>
-        </div>
-      </div>
-
-      {/* Mobile drawer */}
+      {/* Mobile drawer — outside header so fixed positioning works */}
       {menuOpen && <div className={s.overlay} onClick={closeMenu} />}
       <div className={`${s.drawer} ${menuOpen ? s.drawerOpen : ""}`}>
-        <a href="/" className={s.drawerBrand}>
+        <a href="/" className={s.drawerBrand} onClick={closeMenu}>
           <span className={s.mark} aria-hidden>
             <Logo size={24} />
           </span>
-          <span className={s.wordmark}>korana</span>
+          <span className={s.drawerWordmark}>korana</span>
           <span className={s.mailBadge}>mail</span>
         </a>
 
@@ -94,6 +89,6 @@ export function MailNav() {
           </a>
         </div>
       </div>
-    </header>
+    </>
   );
 }

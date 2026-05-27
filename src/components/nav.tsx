@@ -28,98 +28,92 @@ export function Nav() {
     return () => document.removeEventListener("click", onClick);
   }, [showProducts]);
 
-  // Lock body scroll when menu open
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
-      <div className={`container ${s.inner}`}>
-        {/* Hamburger — mobile only */}
-        <button
-          className={s.burger}
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
-          <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
-        </button>
-
-        {/* Brand — desktop only */}
-        <a href="#" className={s.brand} aria-label="Korana home">
-          <span className={s.mark} aria-hidden>
-            <Logo size={28} />
-          </span>
-          <span className={s.wordmark}>korana</span>
-        </a>
-
-        <nav className={s.links}>
-          <div className={s.dropWrap} ref={dropRef}>
-            <button
-              className={`${s.link} ${s.dropTrigger}`}
-              onClick={() => setShowProducts((v) => !v)}
-              aria-expanded={showProducts}
-            >
-              Products <ChevronDown size={12} />
-            </button>
-            {showProducts && (
-              <div className={s.dropdown}>
-                <a href="#what" className={s.dropItem} onClick={() => setShowProducts(false)}>
-                  <div className={s.dropIcon}>
-                    <Logo size={16} />
-                  </div>
-                  <div>
-                    <div className={s.dropTitle}>AI Chief of Staff</div>
-                    <div className={s.dropDesc}>Run your back office on autopilot</div>
-                  </div>
-                </a>
-                <a href="/mail" className={s.dropItem}>
-                  <div className={s.dropIcon} style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
-                    <MailEnvelope size={15} />
-                  </div>
-                  <div>
-                    <div className={s.dropTitle}>
-                      AI Mail
-                      <span className={s.dropNew}>New</span>
-                    </div>
-                    <div className={s.dropDesc}>Email that thinks, replies & decides</div>
-                  </div>
-                </a>
-              </div>
-            )}
-          </div>
-          <a href="#channels" className={s.link}>Channels</a>
-          <a href="#pricing" className={s.link}>Pricing</a>
-          <a href="#faq" className={s.link}>FAQ</a>
-        </nav>
-
-        <div className={s.actions}>
-          <a href="#" className={`${s.link} ${s.login}`}>Sign in</a>
-          <a href="#cta" className="btn btn-primary btn-sm">
-            Request access
-            <Arrow size={14} />
+    <>
+      <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
+        <div className={`container ${s.inner}`}>
+          <a href="#" className={s.brand} aria-label="Korana home">
+            <span className={s.mark} aria-hidden>
+              <Logo size={28} />
+            </span>
+            <span className={s.wordmark}>korana</span>
           </a>
-        </div>
-      </div>
 
-      {/* Mobile drawer */}
+          <nav className={s.links}>
+            <div className={s.dropWrap} ref={dropRef}>
+              <button
+                className={`${s.link} ${s.dropTrigger}`}
+                onClick={() => setShowProducts((v) => !v)}
+                aria-expanded={showProducts}
+              >
+                Products <ChevronDown size={12} />
+              </button>
+              {showProducts && (
+                <div className={s.dropdown}>
+                  <a href="#what" className={s.dropItem} onClick={() => setShowProducts(false)}>
+                    <div className={s.dropIcon}>
+                      <Logo size={16} />
+                    </div>
+                    <div>
+                      <div className={s.dropTitle}>AI Chief of Staff</div>
+                      <div className={s.dropDesc}>Run your back office on autopilot</div>
+                    </div>
+                  </a>
+                  <a href="/mail" className={s.dropItem}>
+                    <div className={s.dropIcon} style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                      <MailEnvelope size={15} />
+                    </div>
+                    <div>
+                      <div className={s.dropTitle}>
+                        AI Mail
+                        <span className={s.dropNew}>New</span>
+                      </div>
+                      <div className={s.dropDesc}>Email that thinks, replies & decides</div>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
+            <a href="#channels" className={s.link}>Channels</a>
+            <a href="#pricing" className={s.link}>Pricing</a>
+            <a href="#faq" className={s.link}>FAQ</a>
+          </nav>
+
+          <div className={s.actions}>
+            <a href="#" className={`${s.link} ${s.login}`}>Sign in</a>
+            <a href="#cta" className="btn btn-primary btn-sm">
+              Request access
+              <Arrow size={14} />
+            </a>
+            <button
+              className={s.burger}
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Menu"
+              aria-expanded={menuOpen}
+            >
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen1 : ""}`} />
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen2 : ""}`} />
+              <span className={`${s.burgerLine} ${menuOpen ? s.burgerOpen3 : ""}`} />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile drawer — outside header so fixed positioning works */}
       {menuOpen && <div className={s.overlay} onClick={closeMenu} />}
       <div className={`${s.drawer} ${menuOpen ? s.drawerOpen : ""}`}>
         <a href="#" className={s.drawerBrand} onClick={closeMenu}>
           <span className={s.mark} aria-hidden>
             <Logo size={24} />
           </span>
-          <span className={s.wordmark}>korana</span>
+          <span className={s.drawerWordmark}>korana</span>
         </a>
 
         <div className={s.drawerSection}>
@@ -154,6 +148,6 @@ export function Nav() {
           <a href="#" className={s.drawerLink} onClick={closeMenu}>Sign in</a>
         </div>
       </div>
-    </header>
+    </>
   );
 }
