@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Web, Phone, Desktop } from "./icons";
 import { MailInboxMockup } from "./mockups/mail-inbox";
-import { MailPhoneInbox } from "./mockups/mail-phone-inbox";
+import { MailPhoneInbox, MailPhoneDraft, MailPhoneSearch } from "./mockups/mail-phone-inbox";
 import { MailAiMockup } from "./mockups/mail-ai";
 import { PhoneFrame } from "./mockups/phone-frame";
 import { ScaledFit } from "./mockups/scaled-fit";
@@ -91,7 +91,7 @@ export function MailChannels() {
             </div>
           </div>
 
-          {/* Mobile */}
+          {/* Mobile — 3 phones */}
           <div className={`${s.pane} ${active === "mobile" ? s.paneOn : ""}`}>
             <div className={s.split}>
               <div className={s.copy}>
@@ -101,10 +101,25 @@ export function MailChannels() {
                   ))}
                 </ul>
               </div>
-              <div className={s.mockup} style={{ display: "flex", justifyContent: "center" }}>
-                <PhoneFrame>
-                  <MailPhoneInbox />
-                </PhoneFrame>
+              <div className={s.phoneTrio}>
+                <div className={s.phoneLeft}>
+                  <div className={s.phoneLabel}>Smart Inbox</div>
+                  <PhoneFrame>
+                    <MailPhoneInbox />
+                  </PhoneFrame>
+                </div>
+                <div className={s.phoneCenter}>
+                  <div className={s.phoneLabel}>AI Drafts</div>
+                  <PhoneFrame>
+                    <MailPhoneDraft />
+                  </PhoneFrame>
+                </div>
+                <div className={s.phoneRight}>
+                  <div className={s.phoneLabel}>AI Search</div>
+                  <PhoneFrame>
+                    <MailPhoneSearch />
+                  </PhoneFrame>
+                </div>
               </div>
             </div>
           </div>

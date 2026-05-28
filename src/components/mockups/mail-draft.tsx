@@ -7,7 +7,7 @@ export function MailDraftMockup() {
         <div className={s.dots}>
           <span /><span /><span />
         </div>
-        <div className={s.url}>mail.korana.ai/compose</div>
+        <div className={s.url}>mail.example.com/compose</div>
       </div>
 
       <div className={s.compose}>

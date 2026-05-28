@@ -83,9 +83,6 @@ export function MailPricing() {
               <a href="#faq" style={{ color: "var(--ink)", textDecoration: "underline", textDecorationThickness: "1px", textUnderlineOffset: "3px" }}>See FAQ</a>
             </span>
           </div>
-          <div style={{ fontSize: 12.5, color: "var(--ink-3)", fontFamily: "var(--font-mono)" }}>
-            no credit card &middot; cancel anytime
-          </div>
         </div>
       </div>
     </section>

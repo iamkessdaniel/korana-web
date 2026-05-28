@@ -66,7 +66,7 @@ export default function MailPage() {
       <MailPricing />
       <MailFAQ />
       <MailCta />
-      <Footer />
+      <Footer hideCta />
     </>
   );
 }

@@ -2,10 +2,11 @@ import { Logo } from "./icons";
 import { CtaForm } from "./cta-form";
 import s from "./footer.module.css";
 
-export function Footer() {
+export function Footer({ hideCta }: { hideCta?: boolean } = {}) {
   return (
     <>
       {/* Final CTA */}
+      {!hideCta && (
       <section className={s.cta} id="cta">
         <div className={`container ${s.ctaInner}`}>
           <div className={s.ctaEyebrow}>
@@ -21,12 +22,10 @@ export function Footer() {
           </p>
           <div className={s.ctaForm}>
             <CtaForm />
-            <div style={{ fontSize: 12.5, color: "var(--ink-3)", marginTop: 14, fontFamily: "var(--font-mono)" }}>
-              14-day trial · no credit card · WhatsApp setup in 30 min
-            </div>
           </div>
         </div>
       </section>
+      )}
 
       {/* Footer */}
       <footer className={s.ft}>

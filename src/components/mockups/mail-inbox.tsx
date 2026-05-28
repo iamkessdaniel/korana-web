@@ -88,7 +88,7 @@ export function MailInboxMockup() {
             <rect x="4" y="11" width="16" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
             <path d="M8 11V7a4 4 0 018 0v4" stroke="currentColor" strokeWidth="1.5" />
           </svg>
-          <span>mail.korana.ai</span>
+          <span>mail.example.com</span>
         </div>
         <div style={{ width: 52 }} />
       </div>

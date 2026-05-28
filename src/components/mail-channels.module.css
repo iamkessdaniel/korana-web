@@ -75,92 +75,77 @@
 }
 .mockup { min-width: 0; }
 
-/* Desktop widget mockup */
-.desktopWidget {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--r-xl);
-  box-shadow: var(--shadow-lg);
-  padding: 0;
-  max-width: 360px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.dwHead {
+/* ── 3-phone layout ── */
+.phoneTrio {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.phoneLeft,
+.phoneCenter,
+.phoneRight {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--line);
+  gap: 12px;
 }
-.dwDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--positive);
-  animation: dwPulse 2s ease-in-out infinite;
+.phoneCenter {
+  transform: translateY(-12px);
 }
-@keyframes dwPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-.dwLabel {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink);
-  flex: 1;
-}
-.dwBadge {
-  font-size: 10px;
+.phoneLabel {
+  font-size: 10.5px;
   font-family: var(--font-mono);
-  background: var(--accent);
-  color: #fff;
-  padding: 1px 7px;
-  border-radius: 999px;
-}
-.dwItem {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--line-2);
-}
-.dwItem:last-child { border-bottom: none; }
-.dwFrom {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 2px;
-}
-.dwSnippet {
-  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--ink-3);
-  margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 500;
 }
-.dwActions { display: flex; gap: 6px; }
-.dwBtn {
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: var(--positive);
-  color: #fff;
-  font-size: 10.5px;
-  font-weight: 550;
-  border: none;
+.phoneLeft :global(.frame),
+.phoneCenter :global(.frame),
+.phoneRight :global(.frame) {
+  transform: scale(0.72);
+  transform-origin: top center;
 }
-.dwBtnGhost {
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--ink-2);
-  font-size: 10.5px;
+
+@media (max-width: 1100px) {
+  .phoneLeft :global(.frame),
+  .phoneCenter :global(.frame),
+  .phoneRight :global(.frame) {
+    transform: scale(0.6);
+  }
+  .phoneTrio { gap: 8px; }
 }
 
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; gap: 32px; }
   .stage { min-height: auto; }
+  /* On mobile responsive, show phones scrollable horizontally */
+  .phoneTrio {
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .phoneLeft,
+  .phoneCenter,
+  .phoneRight {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+  .phoneCenter { transform: none; }
+  .phoneLeft :global(.frame),
+  .phoneCenter :global(.frame),
+  .phoneRight :global(.frame) {
+    transform: scale(0.82);
+  }
 }
 @media (max-width: 600px) {
   .head { margin-bottom: 28px; }
   .tabs { margin-bottom: 28px; }
+  .phoneLeft :global(.frame),
+  .phoneCenter :global(.frame),
+  .phoneRight :global(.frame) {
+    transform: scale(0.75);
+  }
 }
