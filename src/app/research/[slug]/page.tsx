@@ -7,6 +7,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ResearchCover } from "@/components/research-cover";
 import { ResearchCard } from "@/components/research-card";
+import { CtaForm } from "@/components/cta-form";
 import s from "../research.module.css";
 
 export function generateStaticParams() {
@@ -70,6 +71,17 @@ function BlockRenderer({ block }: { block: ContentBlock }) {
             <li key={i}>{item}</li>
           ))}
         </ul>
+      );
+    case "callout":
+      return (
+        <aside className={s.callout}>
+          <p className={s.calloutText}>{block.text}</p>
+          {block.link && (
+            <Link href={block.link} className={s.calloutLink}>
+              {block.linkText || "Learn more"} &rarr;
+            </Link>
+          )}
+        </aside>
       );
   }
 }
@@ -178,6 +190,20 @@ export default async function ArticlePage({ params }: Props) {
             <BlockRenderer key={i} block={block} />
           ))}
         </article>
+
+        <div className={s.articleCta}>
+          <div className={s.ctaBox}>
+            <h3 className={s.ctaBoxH}>
+              Run your back office on <em>autopilot.</em>
+            </h3>
+            <p className={s.ctaBoxSub}>
+              Join the waitlist for Korana — the AI Chief of Staff for growing companies.
+            </p>
+            <div className={s.ctaBoxForm}>
+              <CtaForm />
+            </div>
+          </div>
+        </div>
 
         <section className={s.related}>
           <div className="container">

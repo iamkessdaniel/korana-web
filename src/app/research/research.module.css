@@ -188,17 +188,63 @@
   background: var(--accent);
 }
 
-/* Divider before related */
-.articleEnd {
+/* Inline product callout */
+.callout {
+  margin: 36px 0;
+  padding: 24px 28px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.calloutText {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.calloutLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 140ms;
+}
+.calloutLink:hover { gap: 8px; }
+
+/* Newsletter CTA box */
+.articleCta {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 var(--gutter) 80px;
 }
-.articleDivider {
-  width: 40px;
-  height: 1px;
-  background: var(--line);
-  margin: 0 0 48px;
+.ctaBox {
+  text-align: center;
+  padding: 48px 36px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+}
+.ctaBoxH {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.ctaBoxH em {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+.ctaBoxSub {
+  font-size: 14.5px;
+  color: var(--ink-3);
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+.ctaBoxForm {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* Related posts */

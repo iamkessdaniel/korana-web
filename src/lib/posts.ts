@@ -3,7 +3,8 @@ export type ContentBlock =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "quote"; text: string; cite?: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "callout"; text: string; link?: string; linkText?: string };
 
 export type Post = {
   slug: string;
@@ -65,6 +66,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Stop blaming yourself" },
       { type: "p", text: "If you feel overwhelmed by email, it's not because you lack discipline. It's not because you haven't found the right productivity system. It's because you're using a 55-year-old interface to manage the most complex communication channel in modern work." },
       { type: "p", text: "The fix isn't a better human. It's a better medium. Email needs to become intelligent — not smart enough to suggest \"Sounds good!\" but smart enough to genuinely understand and act on what arrives. That's the redesign email has been waiting for." },
+      { type: "callout", text: "Korana Mail is built on this premise: your inbox should comprehend every message, handle the routine, and surface only what needs you. No more manual triage.", link: "/mail", linkText: "See how Korana Mail works" },
     ],
   },
 
@@ -110,6 +112,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "The real question" },
       { type: "p", text: "The question isn't \"how do we help founders manage operations better?\" It's \"why are founders managing operations at all?\"" },
       { type: "p", text: "The efficiency crisis isn't a personal failing. It's an infrastructure gap — and it's one that AI agents are uniquely positioned to close. Not by giving founders another dashboard, but by handling the work that shouldn't have landed on their desk in the first place." },
+      { type: "callout", text: "Korana is the AI Chief of Staff for early-stage companies. It handles email, invoicing, scheduling, bookkeeping, and customer communication — so founders can focus on building.", link: "/#what", linkText: "See what Korana handles" },
     ],
   },
 
@@ -153,6 +156,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Keyboard shortcuts make you faster at processing email. They don't reduce the amount of email you need to process. Smart compose helps you write replies quicker. It doesn't reduce the number of replies you need to write." },
       { type: "p", text: "Comprehension — genuine understanding of what a message is, what it needs, and what to do about it — is the only lever that actually reduces the human time-on-email. Everything else is optimization within a broken paradigm." },
       { type: "p", text: "The 28% isn't inevitable. It's a symptom of email requiring human comprehension for every single message. Remove that requirement, and the number collapses." },
+      { type: "callout", text: "Korana Mail eliminates triage entirely. Every email is read, understood, and either handled or queued for your review — before you open your inbox.", link: "/mail", linkText: "Explore Korana Mail" },
     ],
   },
 
@@ -197,6 +201,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "What fills the gap" },
       { type: "p", text: "The gap needs something that has full business context (because it reads your email and documents), requires zero onboarding (because it learns from your data, not from your teaching), costs a fraction of a salary, and doesn't quit." },
       { type: "p", text: "That's not a tool. It's not a hire. It's an AI agent — one that operates across your entire business context and handles operational work the way a well-briefed Chief of Staff would. Without the six-figure salary." },
+      { type: "callout", text: "Korana fills the gap between 'need help' and 'can afford help.' Full business context from day one, zero onboarding, a fraction of the cost.", link: "/#pricing", linkText: "See Korana pricing" },
     ],
   },
 
@@ -246,6 +251,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Thirty years of \"email killers\" have tried and failed to replace email. Slack, Teams, WhatsApp, Notion — they've all carved out niches but none has displaced email as the universal business coordination layer. It's too entrenched, too universal, too interoperable." },
       { type: "p", text: "The fix isn't replacing email. It's making email intelligent enough to handle all the roles we've forced it into. An inbox that understands contracts, tracks projects, manages relationships, processes financial documents, and makes decisions visible — not through better filing, but through genuine comprehension of what's flowing through it." },
       { type: "p", text: "The trade-offs we accepted were necessary in a world where email was dumb infrastructure. In a world where email can think, most of them dissolve." },
+      { type: "callout", text: "Korana Mail doesn't replace email. It makes email intelligent enough to handle the roles we've forced it into — from customer communication to financial operations.", link: "/mail", linkText: "See how Korana Mail thinks" },
     ],
   },
 
@@ -284,6 +290,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "That means an agent that handles invoicing end-to-end. That replies to customer emails in the founder's voice. That reconciles expenses, prepares tax filings, schedules meetings, and produces weekly reports — all without the founder opening a single tool." },
       { type: "p", text: "Not a tool the founder operates. An agent that operates alongside the founder." },
       { type: "p", text: "The bootstrap paradox exists because operations scale linearly with customers, and there's been no way to handle that scaling without proportional human effort. AI agents break that proportionality. Operations can scale. The founder's time doesn't have to." },
+      { type: "callout", text: "Korana breaks the bootstrap paradox. Operations run autonomously from day one — invoicing, email, scheduling, bookkeeping — so you can grow without drowning.", link: "/#what", linkText: "How Korana works" },
     ],
   },
 
@@ -329,6 +336,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "What comes after organization" },
       { type: "p", text: "The next era of email isn't better tabs or smarter filters. It's an inbox that reads your email for you, understands it, and handles the routine majority autonomously — escalating only the messages that genuinely require your judgment." },
       { type: "p", text: "Sixteen years of organizational innovation made email 10-15% more manageable. Comprehension will make it 80% less work. The difference isn't incremental. It's structural." },
+      { type: "callout", text: "Korana Mail goes beyond filters and tabs. It reads, understands, and acts on your email — handling the routine so you only see what matters.", link: "/mail", linkText: "Try Korana Mail" },
     ],
   },
 
@@ -376,6 +384,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "What we're seeing among early Korana users isn't AI replacing people. It's AI making the first hire unnecessary and making later hires radically more productive." },
       { type: "p", text: "Instead of hiring an operations coordinator at $55K/year to handle everything, the founder runs Korana for operational work and hires a part-time specialist for the 20% that needs human touch — a bookkeeper for quarter-close, a contract lawyer for negotiations, a customer success person for strategic accounts." },
       { type: "p", text: "The result: better operational coverage at a fraction of the cost, with the founder's time freed for growth work. The first hire you never make might be the smartest personnel decision you ever make." },
+      { type: "callout", text: "Korana handles 80% of what your first ops hire would do — email, invoicing, scheduling, reconciliation, customer replies — from day one.", link: "/#pricing", linkText: "Compare Korana to hiring" },
     ],
   },
 
@@ -419,6 +428,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Email has been a passive carrier for fifty years. Messages go in, messages come out, and the human does all the thinking. The evolution from inbox to decision layer is the shift from passive to active — from a medium that carries information to a layer that understands, tracks, and facilitates the decisions that information demands." },
       { type: "p", text: "Every business function that matters — sales, finance, operations, strategy — flows through email. Making email a decision layer doesn't add another tool to the stack. It upgrades the layer everything already runs through." },
       { type: "p", text: "That's the unfinished evolution. Email became the accidental decision infrastructure of modern business. It's time to make it intentional." },
+      { type: "callout", text: "Korana Mail transforms your inbox into a decision layer — detecting, tracking, and surfacing business decisions as they happen in email.", link: "/mail", linkText: "See the decision layer" },
     ],
   },
 
@@ -459,6 +469,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Productivity tools reduce the admin tax. Templates save 5 minutes per invoice. Automated scheduling eliminates back-and-forth emails. Accounting software is faster than spreadsheets." },
       { type: "p", text: "But reduction isn't elimination. The founder still needs to open the tool, review the output, make decisions, and handle exceptions. The tax shrinks from 30 hours to 20. That's meaningful, but the founder is still paying 20 hours of admin tax on a week that should be spent on growth." },
       { type: "p", text: "Elimination means the work happens without the founder's involvement. Invoices go out, expenses get categorized, books get reconciled, reports get generated, and the founder sees only the exceptions that genuinely require their judgment. The tax drops from 20 hours to 2. That's not a productivity improvement. That's a structural change." },
+      { type: "callout", text: "Korana eliminates the admin tax. Invoicing, bookkeeping, scheduling, customer replies — all handled autonomously. Founders review, not operate.", link: "/#what", linkText: "See what gets automated" },
     ],
   },
 
@@ -618,6 +629,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Human delegation hits a ceiling. You can effectively delegate to 3-5 people before coordination overhead starts eating the time savings. This is why large organizations need management hierarchies." },
       { type: "p", text: "AI delegation has no coordination ceiling. One agent handles email, invoicing, scheduling, reporting, and customer communication — all with shared context. No handoffs between people. No \"let me check with the other team.\" No duplication of context across multiple delegates." },
       { type: "p", text: "For the first time, founders can delegate the way they've always wanted to: completely, with full context, and without the overhead that made delegation feel like a net loss." },
+      { type: "callout", text: "Korana's approval queue is delegation done right. Full context, recommended actions, one-tap decisions. The founder reviews — the AI executes.", link: "/#what", linkText: "See the approval queue" },
     ],
   },
 
@@ -670,6 +682,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "The cornerstone" },
       { type: "p", text: "We believe intelligent email is the cornerstone of the AI-native company. Not because email is the sexiest technology — it's not — but because it's the most universal, the most data-rich, and the most impactful surface for AI to operate on." },
       { type: "p", text: "When your email can think, your business operates differently. Not incrementally. Fundamentally." },
+      { type: "callout", text: "Korana Mail operates at Level 4 — autonomous action. It reads, understands, decides, and acts on your email. Not autocomplete. An operating system.", link: "/mail", linkText: "See Korana Mail in action" },
     ],
   },
 
@@ -844,6 +857,7 @@ export const POSTS: Post[] = [
         "Multi-signal analysis: Combining sender behavior, request type, timing, and context to produce a threat score that's far more nuanced than any single filter."
       ]},
       { type: "p", text: "An inbox that genuinely understands your business relationships, communication patterns, and operational context is the only defense that scales against AI-generated threats. It's not just about reading email. It's about understanding email — deeply enough to know when something doesn't fit." },
+      { type: "callout", text: "Korana Mail's scam protection uses behavioral analysis and relationship context to catch AI-generated phishing that traditional filters miss.", link: "/mail", linkText: "Learn about scam protection" },
     ],
   },
 
@@ -1024,6 +1038,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "The bigger picture" },
       { type: "p", text: "Inbox Ledger is a small feature in the context of everything Korana does. But it illustrates the thesis well: your email already contains the answers. Subscription data, financial records, relationship histories, decision trails — it's all there in your inbox, unread and unanalyzed." },
       { type: "p", text: "The gap has never been data. It's been comprehension. An AI that reads your email doesn't just manage your messages — it surfaces the intelligence that's been hiding in them all along." },
+      { type: "callout", text: "Inbox Ledger is built into Korana Mail. It continuously tracks every subscription, flags renewals, and shows you exactly where your money goes — automatically.", link: "/mail", linkText: "See Inbox Ledger" },
     ],
   },
 
