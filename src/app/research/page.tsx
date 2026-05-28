@@ -50,8 +50,9 @@ function CollectionSchema() {
 }
 
 export default function ResearchPage() {
-  const featured = POSTS[0]!;
-  const rest = POSTS.slice(1);
+  const sorted = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  const featured = sorted[0]!;
+  const rest = sorted.slice(1);
 
   return (
     <>
