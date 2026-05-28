@@ -18,7 +18,7 @@ export function MailInboxDemo() {
   const [active, setActive] = useState<Tab>("inbox");
 
   return (
-    <section className={`${s.demo} section`}>
+    <section className={`${s.demo} section`} id="how">
       <div className="container">
         <div className={s.head}>
           <div className="eyebrow">Smart Views</div>
