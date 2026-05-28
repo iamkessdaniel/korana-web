@@ -76,6 +76,7 @@ const EMAILS = [
 export function MailInboxMockup() {
   return (
     <div className={s.browser}>
+      <div className={s.shine} />
       {/* Browser chrome */}
       <div className={s.chrome}>
         <div className={s.dots}>
@@ -293,6 +294,15 @@ export function MailInboxMockup() {
               <button className={s.aiEdit}>Edit draft</button>
               <button className={s.aiSkip}>Skip</button>
             </div>
+          </div>
+
+          {/* Floating command bar */}
+          <div className={s.cmdBar}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
+              <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
+            </svg>
+            <span className={s.cmdText}>Ask Korana anything...</span>
+            <kbd className={s.kbd}>/</kbd>
           </div>
         </div>
       </div>

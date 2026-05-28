@@ -1,10 +1,14 @@
 .frame {
   width: 280px;
   height: 575px;
-  background: var(--ink);
+  background: linear-gradient(170deg, #3a3a3a 0%, var(--ink) 30%, #1a1a1a 100%);
   border-radius: 44px;
   padding: 9px;
-  box-shadow: var(--shadow-xl), 0 0 0 1.5px color-mix(in srgb, var(--ink) 30%, transparent);
+  box-shadow:
+    var(--shadow-xl),
+    0 0 0 1.5px color-mix(in srgb, var(--ink) 30%, transparent),
+    0 0 60px -10px color-mix(in srgb, var(--accent) 12%, transparent),
+    inset 0 1px 0 0 color-mix(in srgb, #fff 8%, transparent);
   position: relative;
   transform-origin: top center;
 }
@@ -20,6 +24,23 @@
   border-radius: 999px;
   z-index: 2;
 }
+/* Glossy edge highlight */
+.frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  border-radius: 44px 44px 0 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #fff 6%, transparent) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
 .screen {
   width: 100%;
   height: 100%;
@@ -27,4 +48,5 @@
   border-radius: 36px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }

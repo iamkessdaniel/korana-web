@@ -1,10 +1,12 @@
 import s from "./mail-ai.module.css";
 
-const SIDEBAR_ITEMS = [
-  { name: "Inbox", count: 24, active: false },
-  { name: "Decisions", count: 3, active: true },
-  { name: "Action Items", count: 6, active: false },
-  { name: "FYI", count: 8, active: false },
+const SMART_VIEWS = [
+  { name: "All Mail", count: 24, active: false, dimmed: false },
+  { name: "Decisions", count: 3, active: true, dimmed: false },
+  { name: "Meetings", count: 4, active: false, dimmed: false },
+  { name: "Action Items", count: 6, active: false, dimmed: false },
+  { name: "Invoices", count: 2, active: false, dimmed: false },
+  { name: "FYI", count: 8, active: false, dimmed: false },
   { name: "Noise", count: 12, active: false, dimmed: true },
 ];
 
@@ -17,6 +19,7 @@ const EMAILS = [
 export function MailAiMockup() {
   return (
     <div className={s.browser}>
+      <div className={s.shine} />
       <div className={s.chrome}>
         <div className={s.dots}>
           <span className={s.dotRed} />
@@ -34,7 +37,7 @@ export function MailAiMockup() {
       </div>
 
       <div className={s.layout}>
-        {/* Sidebar */}
+        {/* Sidebar — matches web mockup */}
         <div className={s.sidebar}>
           <div className={s.sideHead}>
             <div className={s.sideLogo}>
@@ -49,13 +52,23 @@ export function MailAiMockup() {
               <div className={s.sideEmail}>you@company.com</div>
             </div>
           </div>
+          <button className={s.composeBtn}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            Compose
+          </button>
+
           <div className={s.sideLabel}>Smart Views</div>
-          {SIDEBAR_ITEMS.map((item) => (
-            <div className={`${s.sideItem} ${item.active ? s.sideActive : ""} ${item.dimmed ? s.sideDimmed : ""}`} key={item.name}>
-              <span>{item.name}</span>
-              {item.count > 0 && <span className={s.sideCount}>{item.count}</span>}
-            </div>
-          ))}
+          <div className={s.folderList}>
+            {SMART_VIEWS.map((f) => (
+              <div className={`${s.sideItem} ${f.active ? s.sideActive : ""} ${f.dimmed ? s.sideDimmed : ""}`} key={f.name}>
+                <span>{f.name}</span>
+                {f.count > 0 && <span className={s.sideCount}>{f.count}</span>}
+              </div>
+            ))}
+          </div>
+
           <div className={s.sideLedger}>
             <div className={s.sideLabel}>Inbox Ledger</div>
             <div className={s.ledgerRow}>
@@ -66,11 +79,38 @@ export function MailAiMockup() {
               <span className={s.ledgerName}>Spend</span>
               <span className={s.ledgerVal}>$9,412</span>
             </div>
+            <div className={s.ledgerRow}>
+              <span className={s.ledgerName}>Trips &amp; Tickets</span>
+              <span className={s.ledgerVal}>2</span>
+            </div>
           </div>
+
+          <div className={s.sideLabels}>
+            <div className={s.sideLabel}>Labels</div>
+            <div className={s.labelRow}>
+              <span className={s.labelDot} style={{ background: "var(--accent)" }} />
+              <span className={s.labelName}>Lyra</span>
+            </div>
+            <div className={s.labelRow}>
+              <span className={s.labelDot} style={{ background: "var(--info)" }} />
+              <span className={s.labelName}>Personal</span>
+            </div>
+            <div className={s.labelRow}>
+              <span className={s.labelDot} style={{ background: "var(--ink-3)" }} />
+              <span className={s.labelName}>Newsletters</span>
+            </div>
+          </div>
+
           <div className={s.sideAi}>
-            <span className={s.sideAiDot} />
-            <span>AI Active</span>
-            <span className={s.sideAiStat}>6 drafts ready</span>
+            <div className={s.sideAiHead}>AI Assistant</div>
+            <div className={s.sideAiStatus}>
+              <span className={s.sideAiDot} />
+              Active
+            </div>
+            <div className={s.sideAiStat}>6 drafts ready</div>
+            <div className={s.sideAiStat}>
+              <span className={s.sideAiLink}>3 items routed to CoS</span>
+            </div>
           </div>
         </div>
 
@@ -144,13 +184,13 @@ export function MailAiMockup() {
                   </svg>
                   Approve &amp; Send
                 </button>
-                <button className={s.aiEdit}>Edit</button>
+                <button className={s.aiEditBtn}>Edit</button>
                 <button className={s.aiSkip}>Skip</button>
               </div>
             </div>
           </div>
 
-          {/* Command bar */}
+          {/* Floating command bar */}
           <div className={s.cmdBar}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
               <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
