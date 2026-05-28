@@ -146,11 +146,12 @@ export default async function ArticlePage({ params }: Props) {
       <ArticleSchema post={post} />
       <Nav />
       <main>
-        <div className="container">
+        <div className={s.articleWrap}>
+          <Link href="/research" className={s.back}>
+            &larr; All posts
+          </Link>
+
           <div className={s.articleHeader}>
-            <Link href="/research" className={s.back}>
-              &larr; All posts
-            </Link>
             <div className={s.articlePill}>{post.category}</div>
             <h1 className={`display ${s.articleTitle}`}>{post.title}</h1>
             <p className={s.articleSubtitle}>{post.subtitle}</p>
@@ -162,14 +163,15 @@ export default async function ArticlePage({ params }: Props) {
               <span>{post.readTime}</span>
             </div>
           </div>
-        </div>
 
-        <ResearchCover
-          gradient={post.coverGradient}
-          accent={post.coverAccent}
-          variant={post.coverVariant}
-          mode="banner"
-        />
+          <div className={s.articleCover}>
+            <ResearchCover
+              gradient={post.coverGradient}
+              accent={post.coverAccent}
+              variant={post.coverVariant}
+            />
+          </div>
+        </div>
 
         <article className={s.prose}>
           {post.body.map((block, i) => (
