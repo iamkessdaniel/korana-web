@@ -248,7 +248,7 @@ export function MailInboxMockup() {
                 <div className={s.insightDesc}>Board review &mdash; Thursday 2pm</div>
                 <div className={s.insightQuote}>&ldquo;...before the board meeting on Thursday.&rdquo;</div>
                 <div className={s.insightActions}>
-                  <button className={`${s.insightBtn} ${s.insightBtnDone}`}>Added to calendar &#10003;</button>
+                  <button className={`${s.insightBtn} ${s.insightBtnDone}`}>Added to calendar {"\u2713"}</button>
                   <button className={s.insightBtn}>Open in CoS &rarr;</button>
                 </div>
               </div>
