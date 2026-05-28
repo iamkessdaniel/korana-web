@@ -3,14 +3,14 @@
    --------------------------------------------- */
 
 :root {
-  --bg:        #f5f2eb;
-  --bg-2:      #efeae0;
+  --bg:        #ffffff;
+  --bg-2:      #f7f7f8;
   --surface:   #ffffff;
   --ink:       #14130f;
   --ink-2:     #45413b;
   --ink-3:     #8a857d;
-  --line:      #e3ddcf;
-  --line-2:    #efeadd;
+  --line:      #e5e5e7;
+  --line-2:    #f0f0f2;
   --accent:    #c14a26;
   --accent-2:  #e9c8b4;
   --accent-soft:#f4e4d6;
