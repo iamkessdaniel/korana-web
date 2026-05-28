@@ -7,10 +7,10 @@ export function MailSocialProof() {
       <div className="container">
         <div className={s.bar}>
           {[
-            { n: "94%", l: "of emails auto-handled" },
-            { n: "<8 min", l: "average response time" },
-            { n: "$1/mo", l: "per mailbox" },
-            { n: "0", l: "emails lost" },
+            { n: "94%", l: "of emails handled" },
+            { n: "<8 min", l: "average reply time" },
+            { n: "$1/mo", l: "per mailbox /mo" },
+            { n: "0", l: "emails lost in the move" },
           ].map((st) => (
             <div className={s.barItem} key={st.l}>
               <div className={s.barN}>{st.n}</div>
@@ -19,9 +19,9 @@ export function MailSocialProof() {
           ))}
         </div>
 
-        <div className={s.grid} style={{ marginTop: 32 }}>
-          {MAIL_TESTIMONIALS.map((t, i) => (
-            <article className={`${s.card} ${i === 0 || i === 3 ? s.cardWide : ""}`} key={t.name}>
+        <div className={s.grid} style={{ marginTop: 32, gridTemplateColumns: "repeat(2, 1fr)" }}>
+          {MAIL_TESTIMONIALS.map((t) => (
+            <article className={s.card} key={t.name}>
               <div className={s.quote}>
                 <span className={`${s.mark} serif-italic`}>&ldquo;</span>
                 <p className={s.quoteText}>{t.quote}</p>
@@ -30,7 +30,7 @@ export function MailSocialProof() {
                 <div className={s.avatar} style={{ background: t.color }}>{t.initial}</div>
                 <div>
                   <div className={s.name}>{t.name}</div>
-                  <div className={s.role}>{t.role} · <span style={{ color: "var(--ink-3)" }}>{t.company}</span></div>
+                  <div className={s.role}>{t.role} &middot; <span style={{ color: "var(--ink-3)" }}>{t.company}</span></div>
                 </div>
               </div>
             </article>

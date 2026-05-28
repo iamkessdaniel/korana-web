@@ -1,0 +1,70 @@
+.ee { background: var(--bg); border-bottom: 1px solid var(--line); }
+.head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+.h2 { font-size: clamp(32px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.sub { margin-top: 22px; color: var(--ink-2); font-size: clamp(15px, 1.3vw, 17.5px); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.icon {
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.label {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  font-weight: 550;
+}
+.desc {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.4;
+}
+
+/* Extra row */
+.extraGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.extraItem {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px 18px;
+}
+.extraLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.extraDesc {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .extraGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}

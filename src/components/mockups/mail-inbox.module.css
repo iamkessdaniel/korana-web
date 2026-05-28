@@ -161,6 +161,46 @@
   color: var(--accent);
 }
 
+/* Sidebar section divider */
+.sideSection {
+  padding: 0;
+  border-top: 1px solid var(--line-2);
+}
+
+/* Inbox Ledger */
+.ledgerList { padding: 4px 0 6px; }
+.ledgerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 14px;
+  font-size: 11px;
+}
+.ledgerName { color: var(--ink-2); }
+.ledgerVal {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+}
+
+/* Labels */
+.labelList { padding: 4px 0 6px; }
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  font-size: 11.5px;
+  color: var(--ink-2);
+}
+.labelDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.labelName { flex: 1; }
+
 /* Sidebar AI footer */
 .sideAi {
   padding: 10px 14px;

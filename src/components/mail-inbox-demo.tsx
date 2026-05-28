@@ -21,12 +21,12 @@ export function MailInboxDemo() {
     <section className={`${s.demo} section`}>
       <div className="container">
         <div className={s.head}>
-          <div className="eyebrow">See it in action</div>
+          <div className="eyebrow">Smart Views</div>
           <h2 className={`display ${s.h2}`}>
-            Your inbox, <span className="serif-italic">reimagined.</span>
+            Open your inbox to <span className="serif-italic">decisions,</span> not messages.
           </h2>
           <p className={s.sub}>
-            A webmail client with AI built into every interaction. Triage, draft, approve — all in one place.
+            Every email is categorized the moment it arrives. Smart Views surface what needs you and hide what doesn&rsquo;t. The AI Insights panel extracts dates, invoices, and action items — so you act from context, not clutter.
           </p>
         </div>
 

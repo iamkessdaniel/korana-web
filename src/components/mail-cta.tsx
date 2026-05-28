@@ -10,16 +10,15 @@ export function MailCta() {
           <span>Your first mailbox is waiting.</span>
         </div>
         <h2 className={`display ${s.ctaH2}`}>
-          Stop managing email.<br />
-          <span className="serif-italic">Let Korana handle it.</span>
+          Your inbox, <span className="serif-italic">handled.</span>
         </h2>
         <p className={s.ctaSub}>
-          AI triage, AI drafts, custom domain, IMAP/SMTP — $1/month. Set up in 2 minutes.
+          Get a mailbox. Forward your Gmail. Watch Korana sort, draft, and reply in your voice. Cancel any time &mdash; every message exports in one tap.
         </p>
         <div className={s.ctaForm}>
           <CtaForm />
           <div style={{ fontSize: 12.5, color: "var(--ink-3)", marginTop: 14, fontFamily: "var(--font-mono)" }}>
-            $1/mo per mailbox · no credit card · cancel anytime
+            Setup takes 2 minutes &middot; $1/mo &middot; cancel anytime
           </div>
         </div>
       </div>

@@ -1,0 +1,145 @@
+.scam { background: var(--bg); }
+.head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+.h2 { font-size: clamp(32px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.sub { margin-top: 22px; color: var(--ink-2); font-size: clamp(15px, 1.3vw, 17.5px); }
+
+.stage {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  padding: 28px 28px 24px;
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.shieldWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+  color: var(--warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.heldPill {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Fake email */
+.email {
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+}
+.emailFrom {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.emailAddr {
+  color: var(--ink-2);
+}
+.flaggedChar {
+  color: var(--warning);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--warning);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+.emailSubject {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.emailSnippet {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+/* Reasons */
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reasonsTitle {
+  font-size: 10.5px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  font-weight: 550;
+}
+.reasonRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.reasonDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 4px;
+}
+.actionBtn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 12.5px;
+  font-weight: 550;
+  border: none;
+}
+.actionBtnGhost {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 12.5px;
+}

@@ -1,0 +1,167 @@
+.setup { background: var(--bg); }
+.head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+.h2 { font-size: clamp(32px, 5vw, 64px); margin: 16px 0 0; line-height: 1.05; }
+.sub { margin-top: 22px; color: var(--ink-2); font-size: clamp(15px, 1.3vw, 17.5px); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cardMiddle { transform: translateY(-12px); }
+
+.cardTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.cardDesc {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin: 0;
+}
+.cardMeta {
+  font-size: 10.5px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+/* DNS block */
+.dnsBlock {
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dnsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--ink-2);
+}
+.dnsType {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  padding: 1px 5px;
+  border-radius: 3px;
+  min-width: 36px;
+  text-align: center;
+}
+.dnsVal {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dnsPri {
+  font-size: 9px;
+  color: var(--ink-3);
+}
+
+/* Forwarding flow */
+.flowBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0 4px;
+  justify-content: center;
+}
+.flowItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.flowIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.flowLabel {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+}
+.flowArrow {
+  font-size: 16px;
+  color: var(--ink-3);
+  margin-top: -16px;
+}
+.flowDot {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  position: relative;
+}
+.flowDot::after {
+  content: "K";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Input preview */
+.inputPreview {
+  padding: 10px 0 0;
+}
+.inputBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  padding: 10px 14px;
+}
+.inputText {
+  font-size: 13px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+}
+.inputCheck {
+  font-size: 11px;
+  color: var(--positive);
+  font-family: var(--font-mono);
+  font-weight: 550;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .cardMiddle { transform: none; }
+}

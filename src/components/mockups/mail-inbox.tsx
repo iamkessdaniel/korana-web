@@ -129,6 +129,42 @@ export function MailInboxMockup() {
             ))}
           </div>
 
+          <div className={s.sideSection}>
+            <div className={s.sideLabel}>Inbox Ledger</div>
+            <div className={s.ledgerList}>
+              <div className={s.ledgerRow}>
+                <span className={s.ledgerName}>Subscriptions</span>
+                <span className={s.ledgerVal}>$1,247/mo</span>
+              </div>
+              <div className={s.ledgerRow}>
+                <span className={s.ledgerName}>Spend</span>
+                <span className={s.ledgerVal}>May</span>
+              </div>
+              <div className={s.ledgerRow}>
+                <span className={s.ledgerName}>Trips &amp; Tickets</span>
+                <span className={s.ledgerVal}>2</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={s.sideSection}>
+            <div className={s.sideLabel}>Labels</div>
+            <div className={s.labelList}>
+              <div className={s.labelRow}>
+                <span className={s.labelDot} style={{ background: "var(--accent)" }} />
+                <span className={s.labelName}>Lyra</span>
+              </div>
+              <div className={s.labelRow}>
+                <span className={s.labelDot} style={{ background: "var(--info)" }} />
+                <span className={s.labelName}>Personal</span>
+              </div>
+              <div className={s.labelRow}>
+                <span className={s.labelDot} style={{ background: "var(--ink-3)" }} />
+                <span className={s.labelName}>Newsletters</span>
+              </div>
+            </div>
+          </div>
+
           <div className={s.sideAi}>
             <div className={s.sideAiHead}>
               <span>AI Assistant</span>
