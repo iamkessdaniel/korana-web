@@ -7,7 +7,7 @@ export function MailLedger() {
         <div className={s.head}>
           <div className="eyebrow">The Inbox Ledger</div>
           <h2 className={`display ${s.h2}`}>
-            Every subscription, receipt, and booking &mdash;{" "}<span className="serif-italic">extracted&nbsp;automatically.</span>
+            Your money, <span className="serif-italic">tracked&nbsp;automatically.</span>
           </h2>
           <p className={s.sub}>
             Korana reads confirmation emails, invoices, and booking threads the moment they arrive and builds a live dashboard. No manual entry. No spreadsheets. Just open the Ledger.

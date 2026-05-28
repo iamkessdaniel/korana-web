@@ -1,5 +1,19 @@
 import s from "./mail-ai.module.css";
 
+const SIDEBAR_ITEMS = [
+  { name: "Inbox", count: 24, active: false },
+  { name: "Decisions", count: 3, active: true },
+  { name: "Drafts", count: 6, active: false },
+  { name: "Sent", count: 0, active: false },
+  { name: "Noise", count: 12, active: false, dimmed: true },
+];
+
+const EMAILS = [
+  { from: "Sarah Chen", subject: "Re: Q3 proposal", time: "2m", tag: "Decision needed", tagColor: "var(--accent)" },
+  { from: "Aanya Reddy", subject: "Invoice follow-up", time: "28m", tag: "Invoice #138 overdue", tagColor: "var(--warning)" },
+  { from: "Alex Rivera", subject: "Intro — Marker x Korana", time: "1h", tag: "Intro — reply suggested", tagColor: "var(--info)" },
+];
+
 export function MailAiMockup() {
   return (
     <div className={s.browser}>
@@ -23,97 +37,85 @@ export function MailAiMockup() {
         {/* Sidebar */}
         <div className={s.sidebar}>
           <div className={s.sideHead}>
-            <div className={s.sideBrand}>Korana Mail</div>
+            <svg width="14" height="14" viewBox="0 0 100 100" fill="none">
+              <ellipse cx="50" cy="50" rx="40" ry="22" transform="rotate(-28 50 50)" fill="none" stroke="currentColor" strokeWidth="10" strokeLinecap="round" />
+              <circle cx="50" cy="50" r="14" fill="currentColor" />
+              <circle cx="83" cy="33" r="10" fill="var(--accent)" />
+            </svg>
+            <span className={s.sideBrand}>Korana Mail</span>
           </div>
-          <div className={s.sideItem}>Inbox</div>
-          <div className={`${s.sideItem} ${s.sideActive}`}>AI</div>
-          <div className={s.sideItem}>Drafts</div>
-          <div className={s.sideItem}>Sent</div>
+          <div className={s.sideLabel}>Smart Views</div>
+          {SIDEBAR_ITEMS.map((item) => (
+            <div className={`${s.sideItem} ${item.active ? s.sideActive : ""} ${item.dimmed ? s.sideDimmed : ""}`} key={item.name}>
+              <span>{item.name}</span>
+              {item.count > 0 && <span className={s.sideCount}>{item.count}</span>}
+            </div>
+          ))}
+          <div className={s.sideAi}>
+            <span className={s.sideAiDot} />
+            <span>AI Active</span>
+          </div>
         </div>
 
-        {/* Main — conversational AI interface */}
-        <div className={s.main}>
-          {/* Conversation history */}
-          <div className={s.convo}>
-            <div className={s.userMsg}>
-              <div className={s.msgBubble}>
-                Reply to Sarah about the Q3 proposal. Attach the pricing comparison and flag the hosting cost increase.
-              </div>
-              <div className={s.msgMeta}>You &middot; 10:22 AM</div>
-            </div>
-
-            <div className={s.aiMsg}>
-              <div className={s.aiAvatar}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
-                </svg>
-              </div>
-              <div className={s.aiContent}>
-                <div className={s.aiLabel}>Korana</div>
-                <div className={s.aiText}>
-                  Done. I&apos;ve drafted a reply to Sarah Chen with the Q2 vs Q3 pricing table attached and the 18% hosting cost flagged in a separate row. 94% tone match.
-                </div>
-                <div className={s.aiCard}>
-                  <div className={s.aiCardHead}>
-                    <span className={s.aiCardLabel}>Draft ready</span>
-                    <span className={s.aiCardMatch}>94% tone match</span>
-                  </div>
-                  <div className={s.aiCardTo}>To: sarah.chen@acme.co</div>
-                  <div className={s.aiCardSubject}>Re: Q3 proposal</div>
-                  <div className={s.aiCardPreview}>
-                    Hi Sarah &mdash; absolutely. I&apos;ve attached the Q2 vs Q3 pricing comparison. The main delta is the 12% volume discount we introduced in July...
-                  </div>
-                  <div className={s.aiCardActions}>
-                    <button className={s.aiCardSend}>Approve &amp; Send</button>
-                    <button className={s.aiCardEdit}>Edit</button>
-                    <button className={s.aiCardEdit}>Discard</button>
-                  </div>
-                </div>
+        {/* Email list */}
+        <div className={s.list}>
+          <div className={s.listHead}>Decisions <span className={s.listBadge}>3</span></div>
+          {EMAILS.map((e, i) => (
+            <div className={`${s.row} ${i === 0 ? s.rowSelected : ""}`} key={i}>
+              <div className={s.rowFrom}>{e.from}</div>
+              <div className={s.rowSubject}>{e.subject}</div>
+              <div className={s.rowBottom}>
+                <span className={s.rowTag} style={{ color: e.tagColor, background: `color-mix(in srgb, ${e.tagColor} 12%, transparent)` }}>{e.tag}</span>
+                <span className={s.rowTime}>{e.time}</span>
               </div>
             </div>
+          ))}
+        </div>
 
-            <div className={s.userMsg}>
-              <div className={s.msgBubble}>
-                What invoices are overdue this week?
-              </div>
-              <div className={s.msgMeta}>You &middot; 10:24 AM</div>
+        {/* Detail pane with AI conversation */}
+        <div className={s.detail}>
+          <div className={s.detailHead}>
+            <div className={s.detailFrom}>Sarah Chen</div>
+            <div className={s.detailSubject}>Re: Q3 proposal</div>
+          </div>
+
+          <div className={s.detailBody}>
+            <p>Can we add the pricing table from last quarter? I want to compare YoY before the board meeting on Thursday.</p>
+          </div>
+
+          {/* AI conversation panel */}
+          <div className={s.aiPanel}>
+            <div className={s.aiPanelHead}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
+              </svg>
+              <span>Korana AI</span>
             </div>
-
-            <div className={s.aiMsg}>
-              <div className={s.aiAvatar}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
-                </svg>
+            <div className={s.aiReply}>
+              I&apos;ve drafted a reply with the Q2 vs Q3 pricing comparison attached and the 18% hosting cost flagged.
+            </div>
+            <div className={s.aiDraftCard}>
+              <div className={s.aiDraftHead}>
+                <span className={s.aiDraftLabel}>Draft ready</span>
+                <span className={s.aiDraftMatch}>94% match</span>
               </div>
-              <div className={s.aiContent}>
-                <div className={s.aiLabel}>Korana</div>
-                <div className={s.aiText}>
-                  Two overdue invoices found:
-                </div>
-                <div className={s.aiList}>
-                  <div className={s.aiListItem}>
-                    <span className={s.aiListDot} style={{ background: "var(--warning)" }} />
-                    <span><strong>#138</strong> &mdash; Aanya Reddy &mdash; $4,200 &middot; 12 days overdue</span>
-                  </div>
-                  <div className={s.aiListItem}>
-                    <span className={s.aiListDot} style={{ background: "var(--warning)" }} />
-                    <span><strong>#141</strong> &mdash; Marker Studio &mdash; $1,800 &middot; 3 days overdue</span>
-                  </div>
-                </div>
-                <div className={s.aiSuggestion}>Want me to send a follow-up to both?</div>
+              <div className={s.aiDraftPreview}>
+                Hi Sarah &mdash; absolutely. I&apos;ve attached the Q2 vs Q3 pricing comparison. The main delta is the 12% volume discount...
+              </div>
+              <div className={s.aiDraftActions}>
+                <button className={s.aiSend}>Approve &amp; Send</button>
+                <button className={s.aiEdit}>Edit</button>
               </div>
             </div>
           </div>
 
           {/* Command bar */}
           <div className={s.cmdBar}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
               <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
             </svg>
-            <span className={s.cmdPlaceholder}>Ask Korana anything or give an instruction...</span>
-            <div className={s.cmdHint}>
-              <kbd className={s.kbd}>/</kbd>
-            </div>
+            <span className={s.cmdText}>Ask Korana anything...</span>
+            <kbd className={s.kbd}>/</kbd>
           </div>
         </div>
       </div>
