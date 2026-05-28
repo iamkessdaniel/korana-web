@@ -4,25 +4,25 @@ import { useState, useEffect } from "react";
 import { Search } from "./icons";
 import s from "./mail-search.module.css";
 
-const QUERY = "that receipt from the lagos hotel in september";
+const QUERY = "that hotel receipt from the new york trip in september";
 
 const RESULTS = [
   {
-    from: "Radisson Blu Lagos",
-    subject: "Booking Confirmation #RBL-9847",
-    snippet: '"...your reservation for Sept 14\u201319, 1 room, king bed. Total: $1,180..."',
+    from: "The Standard, NYC",
+    subject: "Booking Confirmation #STD-28471",
+    snippet: '"...your reservation for Sept 14\u201319, 1 room, king suite. Total: $2,340..."',
     action: "Open thread",
   },
   {
-    from: "Flutterwave",
-    subject: "Payment Receipt \u2014 $1,180.00",
-    snippet: '"...payment to Radisson Blu Ikeja, ref FLW-20250914-7732..."',
+    from: "Stripe",
+    subject: "Payment Receipt \u2014 $2,340.00",
+    snippet: '"...payment to The Standard High Line, ref ch_3N8x...4242..."',
     action: "Open thread",
   },
   {
-    from: "TripAdvisor",
-    subject: "Review your stay at Radisson Blu",
-    snippet: '"...you checked out on Sept 19. How was your stay?"',
+    from: "Delta Air Lines",
+    subject: "Your trip to New York \u2014 Sept 14",
+    snippet: '"...Flight DL 412, JFK Terminal 4, departing 8:15 AM..."',
     action: "Open thread",
   },
 ];
@@ -51,7 +51,7 @@ export function MailSearch() {
         <div className={s.head}>
           <div className="eyebrow">Search</div>
           <h2 className={`display ${s.h2}`}>
-            Find the thread <span className="serif-italic">you barely remember.</span>
+            Find the thread <span className="serif-italic">you&nbsp;barely&nbsp;remember.</span>
           </h2>
           <p className={s.sub}>
             Describe what you&rsquo;re looking for in plain language. Korana searches subjects, bodies, attachments, and extracted data &mdash; and returns results ranked by relevance, not date.

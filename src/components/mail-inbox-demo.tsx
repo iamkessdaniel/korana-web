@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Inbox, Send } from "./icons";
+import { Inbox, Sparkle } from "./icons";
 import { MailInboxMockup } from "./mockups/mail-inbox";
-import { MailDraftMockup } from "./mockups/mail-draft";
+import { MailAiMockup } from "./mockups/mail-ai";
 import { ScaledFit } from "./mockups/scaled-fit";
 import s from "./mail-inbox-demo.module.css";
 
-type Tab = "inbox" | "draft";
+type Tab = "inbox" | "ai";
 
 const TABS: { id: Tab; icon: React.ReactNode; label: string }[] = [
   { id: "inbox", icon: <Inbox size={15} />, label: "Inbox" },
-  { id: "draft", icon: <Send size={15} />, label: "Compose" },
+  { id: "ai", icon: <Sparkle size={15} />, label: "AI" },
 ];
 
 export function MailInboxDemo() {
@@ -23,10 +23,10 @@ export function MailInboxDemo() {
         <div className={s.head}>
           <div className="eyebrow">Smart Views</div>
           <h2 className={`display ${s.h2}`}>
-            Open your inbox to <span className="serif-italic">decisions,</span> not messages.
+            Open your inbox to <span className="serif-italic">decisions,</span>{" "}not&nbsp;messages.
           </h2>
           <p className={s.sub}>
-            Every email is categorized the moment it arrives. Smart Views surface what needs you and hide what doesn&rsquo;t. The AI Insights panel extracts dates, invoices, and action items — so you act from context, not clutter.
+            Every email is categorized the moment it arrives. Smart Views surface what needs you and hide what doesn&rsquo;t. The AI Insights panel extracts dates, invoices, and action items &mdash; so you act from context, not clutter.
           </p>
         </div>
 
@@ -118,9 +118,9 @@ export function MailInboxDemo() {
               </div>
             </div>
           </div>
-          <div className={`${s.pane} ${active === "draft" ? s.paneOn : ""}`}>
+          <div className={`${s.pane} ${active === "ai" ? s.paneOn : ""}`}>
             <ScaledFit width={980} height={640}>
-              <MailDraftMockup />
+              <MailAiMockup />
             </ScaledFit>
           </div>
         </div>

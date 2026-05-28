@@ -1,0 +1,267 @@
+.browser {
+  width: 980px;
+  height: 640px;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--ink) 4%, transparent),
+    0 4px 24px -4px color-mix(in srgb, var(--ink) 12%, transparent),
+    0 12px 48px -8px color-mix(in srgb, var(--ink) 8%, transparent);
+  display: flex;
+  flex-direction: column;
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.dots { display: flex; gap: 7px; width: 52px; }
+.dotRed, .dotYellow, .dotGreen { width: 10px; height: 10px; border-radius: 50%; }
+.dotRed { background: #ff5f57; }
+.dotYellow { background: #febc2e; }
+.dotGreen { background: #28c840; }
+.urlBar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+.lockIcon { color: var(--positive); flex-shrink: 0; }
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  min-height: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid var(--line-2);
+  background: var(--bg);
+  padding: 14px 0;
+}
+.sideHead { padding: 0 14px 14px; border-bottom: 1px solid var(--line-2); }
+.sideBrand { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.sideItem {
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.sideActive {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  font-weight: 550;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.convo {
+  flex: 1;
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* User messages */
+.userMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.msgBubble {
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+.msgMeta {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+/* AI messages */
+.aiMsg {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.aiAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.aiContent { flex: 1; min-width: 0; }
+.aiLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.aiText {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+/* Inline draft card */
+.aiCard {
+  margin-top: 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+}
+.aiCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.aiCardLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--positive);
+  font-weight: 600;
+}
+.aiCardMatch {
+  font-size: 9.5px;
+  font-family: var(--font-mono);
+  color: var(--positive);
+  background: color-mix(in srgb, var(--positive) 10%, transparent);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.aiCardTo {
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-bottom: 2px;
+}
+.aiCardSubject {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.aiCardPreview {
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.aiCardActions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+.aiCardSend {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--positive);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 550;
+  border: none;
+}
+.aiCardEdit {
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-2);
+  font-size: 11px;
+}
+
+/* AI list */
+.aiList {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.aiListItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+.aiListDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.aiSuggestion {
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Command bar */
+.cmdBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--accent);
+}
+.cmdIcon { flex-shrink: 0; }
+.cmdPlaceholder {
+  flex: 1;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.cmdHint { flex-shrink: 0; }
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+}

@@ -19,24 +19,17 @@ export function MailSetup() {
           <div className={s.card}>
             <div className={s.cardTitle}>Bring your own domain</div>
             <p className={s.cardDesc}>
-              Point your MX records to Korana and keep your address.
+              Point your domain to Korana. We handle SPF, DKIM, and DMARC automatically.
             </p>
-            <div className={s.dnsBlock}>
-              <div className={s.dnsRow}>
-                <span className={s.dnsType}>MX</span>
-                <span className={s.dnsVal}>mail.korana.ai</span>
-                <span className={s.dnsPri}>10</span>
-              </div>
-              <div className={s.dnsRow}>
-                <span className={s.dnsType}>TXT</span>
-                <span className={s.dnsVal}>v=spf1 include:korana.ai ~all</span>
-              </div>
-              <div className={s.dnsRow}>
-                <span className={s.dnsType}>CNAME</span>
-                <span className={s.dnsVal}>k1._domainkey &rarr; dkim.korana.ai</span>
+            <div className={s.domainPreview}>
+              <div className={s.domainAddr}>you@yourcompany.com</div>
+              <div className={s.domainArrow}>&darr;</div>
+              <div className={s.domainDest}>
+                <span className={s.domainDot} />
+                Korana Mail
               </div>
             </div>
-            <div className={s.cardMeta}>SPF, DKIM, DMARC auto-configured</div>
+            <div className={s.cardMeta}>Full DNS setup guided &middot; takes 2 minutes</div>
           </div>
 
           {/* Card 2 — Forwarding */}

@@ -10,7 +10,6 @@ import { MailLedger } from "@/components/mail-ledger";
 import { MailScamProtection } from "@/components/mail-scam-protection";
 import { MailSearch } from "@/components/mail-search";
 import { MailAskKorana } from "@/components/mail-ask-korana";
-import { MailEverythingElse } from "@/components/mail-everything-else";
 import { MailSocialProof } from "@/components/mail-social-proof";
 import { MailPricing } from "@/components/mail-pricing";
 import { MailFAQ } from "@/components/mail-faq";
@@ -64,7 +63,6 @@ export default function MailPage() {
       <MailScamProtection />
       <MailSearch />
       <MailAskKorana />
-      <MailEverythingElse />
 
       <MailSocialProof />
       <MailPricing />

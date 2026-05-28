@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Web, Phone, Desktop } from "./icons";
 import { MailInboxMockup } from "./mockups/mail-inbox";
 import { MailPhoneInbox } from "./mockups/mail-phone-inbox";
+import { MailAiMockup } from "./mockups/mail-ai";
 import { PhoneFrame } from "./mockups/phone-frame";
 import { ScaledFit } from "./mockups/scaled-fit";
 import s from "./mail-channels.module.css";
@@ -16,10 +17,10 @@ const TABS: { id: Tab; icon: React.ReactNode; label: string }[] = [
   { id: "desktop", icon: <Desktop size={15} />, label: "Desktop" },
 ];
 
-const CONTENT: Record<Tab, { bullets: string[]; }> = {
+const CONTENT: Record<Tab, { bullets: string[] }> = {
   web: {
     bullets: [
-      "Full three-column layout — sidebar, list, detail",
+      "Full three-column layout \u2014 sidebar, list, detail",
       "AI Insights panel and draft approval inline",
       "Keyboard shortcuts for power users",
       "Works in any modern browser, nothing to install",
@@ -29,16 +30,16 @@ const CONTENT: Record<Tab, { bullets: string[]; }> = {
     bullets: [
       "Swipe to approve, archive, or snooze",
       "Push notifications for items that need you",
-      "Offline reading — syncs when you reconnect",
+      "AI command bar \u2014 ask anything, hands-free",
       "Native-feeling speed on iOS and Android",
     ],
   },
   desktop: {
     bullets: [
-      "Menu-bar quick-reply widget",
+      "Full dashboard view with AI command bar",
       "Native notifications and badge counts",
-      "Spotlight / Alfred integration for search",
-      "Same AI features as web — nothing stripped",
+      "Conversational AI \u2014 draft, search, ask inline",
+      "Same features as web \u2014 nothing stripped",
     ],
   },
 };
@@ -52,10 +53,10 @@ export function MailChannels() {
         <div className={s.head}>
           <div className="eyebrow">Channels</div>
           <h2 className={`display ${s.h2}`}>
-            Same inbox, <span className="serif-italic">every device.</span>
+            Same inbox, <span className="serif-italic">every&nbsp;device.</span>
           </h2>
           <p className={s.sub}>
-            Web, mobile, and desktop — one experience, fully synced. Pick up where you left off on any screen.
+            Web, mobile, and desktop &mdash; one experience, fully synced. Pick up where you left off on any screen.
           </p>
         </div>
 
@@ -108,7 +109,7 @@ export function MailChannels() {
             </div>
           </div>
 
-          {/* Desktop */}
+          {/* Desktop — full app with AI command bar */}
           <div className={`${s.pane} ${active === "desktop" ? s.paneOn : ""}`}>
             <div className={s.split}>
               <div className={s.copy}>
@@ -119,29 +120,9 @@ export function MailChannels() {
                 </ul>
               </div>
               <div className={s.mockup}>
-                <div className={s.desktopWidget}>
-                  <div className={s.dwHead}>
-                    <div className={s.dwDot} />
-                    <span className={s.dwLabel}>Korana Mail</span>
-                    <span className={s.dwBadge}>3</span>
-                  </div>
-                  <div className={s.dwItem}>
-                    <div className={s.dwFrom}>Sarah Chen</div>
-                    <div className={s.dwSnippet}>Re: Q3 proposal — looks good, can we add...</div>
-                    <div className={s.dwActions}>
-                      <button className={s.dwBtn}>Approve &amp; Send</button>
-                      <button className={s.dwBtnGhost}>Edit</button>
-                    </div>
-                  </div>
-                  <div className={s.dwItem}>
-                    <div className={s.dwFrom}>Alex Rivera</div>
-                    <div className={s.dwSnippet}>Intro — Marker x Korana</div>
-                    <div className={s.dwActions}>
-                      <button className={s.dwBtn}>Approve &amp; Send</button>
-                      <button className={s.dwBtnGhost}>Edit</button>
-                    </div>
-                  </div>
-                </div>
+                <ScaledFit width={980} height={640} maxScale={0.6}>
+                  <MailAiMockup />
+                </ScaledFit>
               </div>
             </div>
           </div>

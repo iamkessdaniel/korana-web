@@ -138,7 +138,7 @@ export function MailInboxMockup() {
               </div>
               <div className={s.ledgerRow}>
                 <span className={s.ledgerName}>Spend</span>
-                <span className={s.ledgerVal}>May</span>
+                <span className={s.ledgerVal}>$9,412</span>
               </div>
               <div className={s.ledgerRow}>
                 <span className={s.ledgerName}>Trips &amp; Tickets</span>

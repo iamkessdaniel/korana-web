@@ -30,7 +30,7 @@ export function MailAskKorana() {
         <div className={s.head}>
           <div className="eyebrow">Ask Korana</div>
           <h2 className={`display ${s.h2}`}>
-            Type one sentence. <span className="serif-italic">Get the answer back.</span>
+            Type one sentence. <span className="serif-italic">Get&nbsp;the&nbsp;answer&nbsp;back.</span>
           </h2>
           <p className={s.sub}>
             Ask anything about your email history. Korana reads the relevant threads, extracts the facts, and gives you a sourced brief &mdash; not a list of messages.

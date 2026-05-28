@@ -43,43 +43,37 @@
   margin-top: 4px;
 }
 
-/* DNS block */
-.dnsBlock {
-  background: var(--bg);
-  border: 1px solid var(--line-2);
-  border-radius: var(--r-md);
-  padding: 10px 12px;
+/* Domain preview */
+.domainPreview {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 0 4px;
 }
-.dnsRow {
+.domainAddr {
+  font-size: 14px;
+  font-family: var(--font-mono);
+  color: var(--ink);
+  font-weight: 500;
+}
+.domainArrow {
+  font-size: 16px;
+  color: var(--ink-3);
+}
+.domainDest {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
-  font-family: var(--font-mono);
-  color: var(--ink-2);
-}
-.dnsType {
-  font-size: 9px;
-  font-weight: 600;
+  font-size: 13px;
   color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  padding: 1px 5px;
-  border-radius: 3px;
-  min-width: 36px;
-  text-align: center;
+  font-weight: 550;
 }
-.dnsVal {
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.dnsPri {
-  font-size: 9px;
-  color: var(--ink-3);
+.domainDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 /* Forwarding flow */

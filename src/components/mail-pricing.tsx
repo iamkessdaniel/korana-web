@@ -14,7 +14,7 @@ export function MailPricing() {
         <div className={s.head}>
           <div className="eyebrow">Pricing</div>
           <h2 className={`display ${s.h2}`}>
-            Start at one dollar. <span className="serif-italic">Grow into it.</span>
+            Start at one dollar.{" "}<span className="serif-italic">Grow&nbsp;into&nbsp;it.</span>
           </h2>
           <p className={s.sub}>
             Three plans. No usage caps. Every plan includes AI triage, Smart Views, custom domain, IMAP/SMTP, and encrypted hosting.
@@ -51,9 +51,6 @@ export function MailPricing() {
                     <span className={s.priceN}>{t.monthly}</span>
                     <span className={s.pricePer}>/ mo</span>
                   </>
-                )}
-                {"priceMeta" in t && t.priceMeta && annual && (
-                  <div className={s.priceMeta}>{(t as { priceMeta: string }).priceMeta}</div>
                 )}
               </div>
 

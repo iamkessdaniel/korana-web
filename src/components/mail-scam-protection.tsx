@@ -8,10 +8,10 @@ export function MailScamProtection() {
         <div className={s.head}>
           <div className="eyebrow">Scam Protection</div>
           <h2 className={`display ${s.h2}`}>
-            The phishing email Gmail <span className="serif-italic">would have missed.</span>
+            Phishing caught <span className="serif-italic">before&nbsp;you&nbsp;see&nbsp;it.</span>
           </h2>
           <p className={s.sub}>
-            Korana analyzes sender reputation, link destinations, and language patterns before the message ever reaches your inbox. Flagged emails are quarantined with a clear explanation.
+            Korana analyzes sender reputation, link destinations, and language patterns before the message reaches your inbox. Flagged emails are quarantined with a clear explanation.
           </p>
         </div>
 
