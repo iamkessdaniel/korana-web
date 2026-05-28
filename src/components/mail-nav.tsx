@@ -40,6 +40,7 @@ export function MailNav() {
             <a href="#how" className={s.link}>How it works</a>
             <a href="#features" className={s.link}>Features</a>
             <a href="#pricing" className={s.link}>Pricing</a>
+            <a href="/research" className={s.link}>Research</a>
             <a href="#faq" className={s.link}>FAQ</a>
           </nav>
 
@@ -80,6 +81,7 @@ export function MailNav() {
           <a href="#how" className={s.drawerLink} onClick={closeMenu}>How it works</a>
           <a href="#features" className={s.drawerLink} onClick={closeMenu}>Features</a>
           <a href="#pricing" className={s.drawerLink} onClick={closeMenu}>Pricing</a>
+          <a href="/research" className={s.drawerLink} onClick={closeMenu}>Research</a>
           <a href="#faq" className={s.drawerLink} onClick={closeMenu}>FAQ</a>
         </div>
 

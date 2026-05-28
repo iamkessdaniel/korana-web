@@ -83,6 +83,7 @@ export function Nav() {
             </div>
             <a href="#channels" className={s.link}>Channels</a>
             <a href="#pricing" className={s.link}>Pricing</a>
+            <a href="/research" className={s.link}>Research</a>
             <a href="#faq" className={s.link}>FAQ</a>
           </nav>
 
@@ -144,6 +145,7 @@ export function Nav() {
         <div className={s.drawerLinks}>
           <a href="#channels" className={s.drawerLink} onClick={closeMenu}>Channels</a>
           <a href="#pricing" className={s.drawerLink} onClick={closeMenu}>Pricing</a>
+          <a href="/research" className={s.drawerLink} onClick={closeMenu}>Research</a>
           <a href="#faq" className={s.drawerLink} onClick={closeMenu}>FAQ</a>
           <a href="#" className={s.drawerLink} onClick={closeMenu}>Sign in</a>
         </div>

@@ -58,7 +58,7 @@ export function Footer({ hideCta }: { hideCta?: boolean } = {}) {
               <div>
                 <div className={s.ftColH}>Company</div>
                 <a href="#">About</a>
-                <a href="#">Blog</a>
+                <a href="/research">Research</a>
                 <a href="#">Careers</a>
                 <a href="mailto:hi@korana.ai">hi@korana.ai</a>
               </div>
