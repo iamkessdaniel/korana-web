@@ -1,7 +1,7 @@
 export const CAPABILITIES = [
   { icon: "receipt" as const, title: "Bookkeeping", description: "Categorizes expenses, reconciles bank feeds, closes your books monthly — ready for your accountant.", tag: "auto" as const },
   { icon: "invoice" as const, title: "Invoicing", description: "Drafts invoices from contracts, sends on schedule, chases politely, applies dunning at 30/60/90.", tag: "auto" as const },
-  { icon: "scale" as const, title: "Tax & filings", description: "Prepares GST, TDS, advance tax, payroll filings. Flags deadlines two weeks out. You sign, Korana files.", tag: "review" as const },
+  { icon: "scale" as const, title: "Tax & filings", description: "Prepares GST, TDS, advance tax, payroll filings. Flags deadlines two weeks out. You sign, Korana.ai files.", tag: "review" as const },
   { icon: "inbox" as const, title: "Customer messages", description: "Drafts replies in your voice, sends the obvious ones, escalates the ones that need you with full context.", tag: "auto" as const },
   { icon: "pipeline" as const, title: "Sales follow-up", description: "Runs sequences, books demos, replies to objections from your inbox. Your CRM stays clean without you opening it.", tag: "auto" as const },
   { icon: "calendar" as const, title: "Scheduling", description: "Books, reschedules, prep notes, intros — over email, WhatsApp, or your calendar link. No back-and-forth.", tag: "auto" as const },
@@ -77,7 +77,7 @@ export const APPROVAL_ITEMS = [
     kind: "Hiring · Engineering",
     title: "Schedule Lena's second round",
     iconType: "calendar" as const,
-    body: "Strong signal from round 1. Korana found 3 slots that work for you and the panel — Tue 2pm, Wed 11am, or Thu 4pm.",
+    body: "Strong signal from round 1. Korana.ai found 3 slots that work for you and the panel — Tue 2pm, Wed 11am, or Thu 4pm.",
     meta: "Source: Notion eval · 2 panelists confirmed",
     action: "Book Tue 2pm",
     time: "4h",
@@ -87,7 +87,7 @@ export const APPROVAL_ITEMS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "I used to spend Sunday nights reconciling the books and dreading Monday inbox. Korana ate both. I work on the product now.",
+    quote: "I used to spend Sunday nights reconciling the books and dreading Monday inbox. Korana.ai ate both. I work on the product now.",
     name: "Aanya Reddy",
     role: "Founder · Lyra Studio",
     company: "design agency · 11 people",
@@ -220,7 +220,7 @@ export const MAIL_PRICING_TIERS = [
       "AI sends routine replies for you",
       "Scam Protection",
       "Full Inbox Ledger + Spend tracking",
-      "Ask Korana (conversational search)",
+      "Ask Korana.ai (conversational search)",
       "Voice learning (adapts to your tone)",
       "Standing Rules engine",
       "25 GB storage",
@@ -250,7 +250,7 @@ export const MAIL_PRICING_TIERS = [
 
 export const MAIL_TESTIMONIALS = [
   {
-    quote: "I used to spend an hour every morning sorting email. Now I glance at the approval queue for 3 minutes and I\u2019m done. Korana drafted better replies than I would have.",
+    quote: "I used to spend an hour every morning sorting email. Now I glance at the approval queue for 3 minutes and I\u2019m done. Korana.ai drafted better replies than I would have.",
     name: "Sara Kim",
     role: "Founder \u00B7 Anchor Studio",
     company: "branding agency \u00B7 6 people \u00B7 Lagos",
@@ -258,7 +258,7 @@ export const MAIL_TESTIMONIALS = [
     color: "#c14a26",
   },
   {
-    quote: "We moved 14 team mailboxes to Korana. Support response time dropped from 4 hours to 8 minutes. At $1 per mailbox. It\u2019s absurd.",
+    quote: "We moved 14 team mailboxes to Korana.ai. Support response time dropped from 4 hours to 8 minutes. At $1 per mailbox. It\u2019s absurd.",
     name: "Diego Alvarez",
     role: "Head of Ops \u00B7 Stratos",
     company: "logistics SaaS \u00B7 30 people \u00B7 Mexico City",
@@ -274,7 +274,7 @@ export const MAIL_TESTIMONIALS = [
     color: "#2c5d8a",
   },
   {
-    quote: "Our support inbox was a graveyard of unread threads. Korana cleared the backlog in a day, and now every customer hears back in under 10 minutes. Our CSAT went from 72 to 94.",
+    quote: "Our support inbox was a graveyard of unread threads. Korana.ai cleared the backlog in a day, and now every customer hears back in under 10 minutes. Our CSAT went from 72 to 94.",
     name: "James Okafor",
     role: "CTO \u00B7 Hexa Systems",
     company: "devtools \u00B7 18 people \u00B7 Nairobi",
@@ -285,12 +285,12 @@ export const MAIL_TESTIMONIALS = [
 
 export const MAIL_FAQS = [
   {
-    q: "Does Korana Mail replace Gmail or Outlook?",
-    a: "It can, but it doesn\u2019t have to. You can use Korana as your primary host with IMAP/SMTP, or keep Gmail/Outlook and forward a copy. Either way, the AI sorts, drafts, and handles replies. Most users keep their existing address and let Korana do the work behind the scenes.",
+    q: "Does Korana.ai Mail replace Gmail or Outlook?",
+    a: "It can, but it doesn\u2019t have to. You can use Korana.ai as your primary host with IMAP/SMTP, or keep Gmail/Outlook and forward a copy. Either way, the AI sorts, drafts, and handles replies. Most users keep their existing address and let Korana.ai do the work behind the scenes.",
   },
   {
     q: "What\u2019s the difference between Personal and Personal+?",
-    a: "Personal gives you AI triage, Smart Views, and draft suggestions for $1/month. Personal+ adds autonomous sending of routine replies, Scam Protection, full Inbox Ledger with spend tracking, Ask Korana conversational search, voice learning, and Standing Rules. If email is the centre of your workday, Personal+ pays for itself fast.",
+    a: "Personal gives you AI triage, Smart Views, and draft suggestions for $1/month. Personal+ adds autonomous sending of routine replies, Scam Protection, full Inbox Ledger with spend tracking, Ask Korana.ai conversational search, voice learning, and Standing Rules. If email is the centre of your workday, Personal+ pays for itself fast.",
   },
   {
     q: "What is the Inbox Ledger?",
@@ -298,18 +298,18 @@ export const MAIL_FAQS = [
   },
   {
     q: "Is this real IMAP/SMTP email hosting?",
-    a: "Yes. Korana Mail runs on a full-featured mail server with standard IMAP and SMTP. Connect any client \u2014 Apple Mail, Thunderbird, Outlook \u2014 just like any other provider. The AI layer runs on top, not instead of the protocol.",
+    a: "Yes. Korana.ai Mail runs on a full-featured mail server with standard IMAP and SMTP. Connect any client \u2014 Apple Mail, Thunderbird, Outlook \u2014 just like any other provider. The AI layer runs on top, not instead of the protocol.",
   },
   {
     q: "How does it learn my voice?",
-    a: "When you connect, Korana reads your last 90 days of sent email to learn how you write \u2014 greetings, sign-offs, formality, common phrases. After that, every edit you make to a draft teaches it more. Most users stop editing after the first week.",
+    a: "When you connect, Korana.ai reads your last 90 days of sent email to learn how you write \u2014 greetings, sign-offs, formality, common phrases. After that, every edit you make to a draft teaches it more. Most users stop editing after the first week.",
   },
   {
     q: "Is my email private?",
     a: "Your email data is encrypted at rest and in transit, stored on dedicated infrastructure, and never used to train AI models. No ads, no third-party scanning. Business customers get data residency options and a DPA. We treat email like the most sensitive data you have \u2014 because it is.",
   },
   {
-    q: "How does it integrate with Korana Chief of Staff?",
+    q: "How does it integrate with Korana.ai Chief of Staff?",
     a: "Invoices, meeting requests, tasks, and approvals in your inbox are detected and routed into CoS workflows automatically. An invoice attachment becomes a payable. A meeting request becomes a calendar event. No forwarding rules or manual setup \u2014 it just works.",
   },
   {
@@ -320,27 +320,27 @@ export const MAIL_FAQS = [
 
 export const FAQS = [
   {
-    q: "Is Korana an agent, an app, or a human team?",
-    a: "Korana is a software product — the operating brain that lets any company run the AI-native way. The 'chief of staff' framing describes the role it plays in your business, not a person. Under the hood it's a coordinated set of AI agents trained on real ops, finance, sales, and customer-success work, with tight integrations into your tools and policies. No humans, no offshoring.",
+    q: "Is Korana.ai an agent, an app, or a human team?",
+    a: "Korana.ai is a software product — the operating brain that lets any company run the AI-native way. The 'chief of staff' framing describes the role it plays in your business, not a person. Under the hood it's a coordinated set of AI agents trained on real ops, finance, sales, and customer-success work, with tight integrations into your tools and policies. No humans, no offshoring.",
   },
   {
-    q: "How does Korana handle decisions I haven't told it about?",
-    a: "When Korana hits something outside its policy or your past pattern, it stops and asks. Each item that lands in your approval queue includes the context, what Korana would do, why, and one tap to approve. You can also pre-approve patterns ('always send invoices over ₹50k for my sign-off').",
+    q: "How does Korana.ai handle decisions I haven't told it about?",
+    a: "When Korana.ai hits something outside its policy or your past pattern, it stops and asks. Each item that lands in your approval queue includes the context, what Korana.ai would do, why, and one tap to approve. You can also pre-approve patterns ('always send invoices over ₹50k for my sign-off').",
   },
   {
     q: "What about my data — accounting, customer info, contracts?",
-    a: "Your data sits in Korana's SOC 2-controlled environment, encrypted at rest and in transit, scoped to your account, and never used to train models. You can export everything — books, threads, contracts, audit log — at any time, in standard formats. Enterprise customers get a DPA, dedicated security review, and additional regional residency options.",
+    a: "Your data sits in Korana.ai's SOC 2-controlled environment, encrypted at rest and in transit, scoped to your account, and never used to train models. You can export everything — books, threads, contracts, audit log — at any time, in standard formats. Enterprise customers get a DPA, dedicated security review, and additional regional residency options.",
   },
   {
     q: "Which integrations are supported?",
     a: "30+ on Team and Enterprise: Gmail, Google Workspace, Outlook, WhatsApp, Slack, Notion, Linear, Stripe, Razorpay, QuickBooks, Xero, Tally, Zoho Books, HubSpot, Salesforce, Pipedrive, Calendly, Cal.com, Twitter/X, LinkedIn, Buffer, and more. We add about two new ones a month, and Enterprise can request custom integrations.",
   },
   {
-    q: "What if Korana gets something wrong?",
-    a: "Every action is reversible and audit-logged. You'll see exactly what Korana did, when, on whose behalf, and with what reasoning. You can roll back sends, void invoices, and add a 'never do this again' rule that propagates immediately. We're aiming for 99.5% accuracy on routine work — and 100% transparency when something needs another look.",
+    q: "What if Korana.ai gets something wrong?",
+    a: "Every action is reversible and audit-logged. You'll see exactly what Korana.ai did, when, on whose behalf, and with what reasoning. You can roll back sends, void invoices, and add a 'never do this again' rule that propagates immediately. We're aiming for 99.5% accuracy on routine work — and 100% transparency when something needs another look.",
   },
   {
     q: "How long to set up?",
-    a: "30 minutes for the basics — connect your inbox, calendar, books, and CRM. Korana spends the first 48 hours observing and asking clarifying questions before it starts acting. Most founders are at full delegation by week two.",
+    a: "30 minutes for the basics — connect your inbox, calendar, books, and CRM. Korana.ai spends the first 48 hours observing and asking clarifying questions before it starts acting. Most founders are at full delegation by week two.",
   },
 ];

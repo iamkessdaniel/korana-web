@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Korana — AI Chief of Staff for every company",
+  title: "Korana.ai — AI Chief of Staff for every company",
   description:
-    "Run your company the AI-native way. Korana handles bookkeeping, invoicing, tax, customer messages, sales follow-ups, scheduling, and weekly reporting — one AI operator instead of 5–10 hires. You approve what matters.",
+    "Run your company the AI-native way. Korana.ai handles bookkeeping, invoicing, tax, customer messages, sales follow-ups, scheduling, and weekly reporting — one AI operator instead of 5–10 hires. You approve what matters.",
   metadataBase: new URL("https://korana.ai"),
   icons: {
     icon: [
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Korana — AI Chief of Staff for every company",
+    title: "Korana.ai — AI Chief of Staff for every company",
     description:
       "Run your company the AI-native way. Skip the 5–10 hires. You approve what matters.",
-    siteName: "Korana",
+    siteName: "Korana.ai",
     type: "website",
     url: "https://korana.ai",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Korana — AI Chief of Staff for every company" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Korana.ai — AI Chief of Staff for every company" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Korana — AI Chief of Staff for every company",
+    title: "Korana.ai — AI Chief of Staff for every company",
     description:
       "Run your company the AI-native way. Skip the 5–10 hires. You approve what matters.",
     images: ["/og.png"],
@@ -45,7 +45,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      name: "Korana",
+      name: "Korana.ai",
       url: "https://korana.ai",
       logo: "https://korana.ai/icon-512.png",
       description:
@@ -54,7 +54,7 @@ const jsonLd = {
     },
     {
       "@type": "SoftwareApplication",
-      name: "Korana",
+      name: "Korana.ai",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web, iOS, Android, WhatsApp",
       description:
@@ -66,7 +66,7 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      name: "Korana",
+      name: "Korana.ai",
       url: "https://korana.ai",
     },
   ],

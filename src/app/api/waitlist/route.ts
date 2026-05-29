@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
       });
 
       await transport.sendMail({
-        from: `"Korana Waitlist" <waitlist@korana.run>`,
+        from: `"Korana.ai Waitlist" <waitlist@korana.run>`,
         to: NOTIFY_TO,
         subject: `New waitlist signup: ${email}`,
         text: `New early access request:\n\nEmail: ${email}\nTime: ${timestamp}\n`,

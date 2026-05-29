@@ -13,7 +13,7 @@ export function MailCta() {
           Your inbox, <span className="serif-italic">handled.</span>
         </h2>
         <p className={s.ctaSub}>
-          Get a mailbox. Forward your Gmail. Watch Korana sort, draft, and reply in your voice. Cancel any time &mdash; every message exports in one tap.
+          Get a mailbox. Forward your Gmail. Watch Korana.ai sort, draft, and reply in your voice. Cancel any time &mdash; every message exports in one tap.
         </p>
         <div className={s.ctaForm}>
           <CtaForm />

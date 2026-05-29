@@ -9,7 +9,7 @@ export function DesktopChat() {
         <span className={`${s.dot} ${s.dotRed}`} />
         <span className={`${s.dot} ${s.dotYellow}`} />
         <span className={`${s.dot} ${s.dotGreen}`} />
-        <span className={s.barTitle}>Korana — Dashboard</span>
+        <span className={s.barTitle}>Korana.ai — Dashboard</span>
       </div>
 
       {/* Faded background workspace */}

@@ -35,7 +35,7 @@ export function WhatsappChat() {
         <div className={s.avatar}><Logo size={16} /></div>
         <div className={s.titles}>
           <div className={s.title}>
-            Korana
+            Korana.ai
             <svg width="13" height="13" viewBox="0 0 24 24" fill="#1e7cbf" style={{ verticalAlign: "-2px", marginLeft: 3, display: "inline" }}>
               <path d="M12 2l2.4 1.8L17.4 3l1.2 2.7 2.7 1.2-.8 2.9L22 12l-1.8 2.4.8 2.9-2.7 1.2-1.2 2.7-2.9-.8L12 22l-2.4-1.8-2.9.8-1.2-2.7L2.7 17l.8-2.9L2 12l1.8-2.4-.8-2.9L5.7 5.4 6.9 2.7l2.9.8L12 2z" />
               <path d="M8 12l3 3 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />

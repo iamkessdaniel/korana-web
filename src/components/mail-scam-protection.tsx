@@ -11,7 +11,7 @@ export function MailScamProtection() {
             Phishing caught <span className="serif-italic">before&nbsp;you&nbsp;see&nbsp;it.</span>
           </h2>
           <p className={s.sub}>
-            Korana analyzes sender reputation, link destinations, and language patterns before the message reaches your inbox. Flagged emails are quarantined with a clear explanation.
+            Korana.ai analyzes sender reputation, link destinations, and language patterns before the message reaches your inbox. Flagged emails are quarantined with a clear explanation.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export function MailScamProtection() {
                 <Shield size={20} />
               </div>
               <div>
-                <div className={s.cardTitle}>Korana held this for you</div>
+                <div className={s.cardTitle}>Korana.ai held this for you</div>
                 <span className={s.heldPill}>HELD</span>
               </div>
             </div>
@@ -38,7 +38,7 @@ export function MailScamProtection() {
             </div>
 
             <div className={s.reasons}>
-              <div className={s.reasonsTitle}>Why Korana flagged this</div>
+              <div className={s.reasonsTitle}>Why Korana.ai flagged this</div>
               <div className={s.reasonRow}>
                 <span className={s.reasonDot} style={{ background: "var(--warning)" }} />
                 <span>Domain spoofing &mdash; &ldquo;paypa<strong>I</strong>.com&rdquo; uses a capital I, not lowercase L</span>

@@ -12,7 +12,7 @@ export function ThisWeek() {
             working in the background.
           </h2>
           <p className={s.sub}>
-            This is what running the AI-native way actually looks like. Korana reads your inbox,
+            This is what running the AI-native way actually looks like. Korana.ai reads your inbox,
             books, calendar, and CRM, figures out what needs to happen, and gets started — drafting,
             sending, filing, scheduling. The only thing it asks for is your signature on what matters.
           </p>

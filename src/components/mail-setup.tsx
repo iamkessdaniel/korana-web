@@ -19,14 +19,14 @@ export function MailSetup() {
           <div className={s.card}>
             <div className={s.cardTitle}>Bring your own domain</div>
             <p className={s.cardDesc}>
-              Point your domain to Korana. We handle SPF, DKIM, and DMARC automatically.
+              Point your domain to Korana.ai. We handle SPF, DKIM, and DMARC automatically.
             </p>
             <div className={s.domainPreview}>
               <div className={s.domainAddr}>you@yourcompany.com</div>
               <div className={s.domainArrow}>&darr;</div>
               <div className={s.domainDest}>
                 <span className={s.domainDot} />
-                Korana Mail
+                Korana.ai Mail
               </div>
             </div>
             <div className={s.cardMeta}>Full DNS setup guided &middot; takes 2 minutes</div>
@@ -36,7 +36,7 @@ export function MailSetup() {
           <div className={`${s.card} ${s.cardMiddle}`}>
             <div className={s.cardTitle}>Forward from Gmail or Outlook</div>
             <p className={s.cardDesc}>
-              Keep your current address. Korana handles the work.
+              Keep your current address. Korana.ai handles the work.
             </p>
             <div className={s.flowBlock}>
               <div className={s.flowItem}>
@@ -51,7 +51,7 @@ export function MailSetup() {
               <span className={s.flowArrow}>&rarr;</span>
               <div className={s.flowItem}>
                 <span className={s.flowDot} />
-                <span className={s.flowLabel}>Korana</span>
+                <span className={s.flowLabel}>Korana.ai</span>
               </div>
             </div>
             <div className={s.cardMeta}>2-minute setup &middot; no migration</div>

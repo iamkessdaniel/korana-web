@@ -139,7 +139,7 @@ export function WebDashboard() {
         <aside className={s.side}>
           <div className={s.sideBrand}>
             <span className={s.sideMark}><Logo size={14} /></span>
-            <span>Korana</span>
+            <span>Korana.ai</span>
           </div>
           <div className={s.sideOrg}>
             <div className={s.sideOrgMark}>L</div>
@@ -184,7 +184,7 @@ export function WebDashboard() {
               </div>
             </div>
             <div className={s.topActions}>
-              <button className={s.pill}><Search size={14} /> Ask Korana…</button>
+              <button className={s.pill}><Search size={14} /> Ask Korana.ai…</button>
               <button className={s.iconBtn}><Bell size={15} /></button>
               <button className={s.iconBtn}><Plus size={14} /></button>
             </div>
@@ -214,7 +214,7 @@ export function WebDashboard() {
             <div className={s.card}>
               <div className={s.cardH}>
                 <div>
-                  <div className={s.cardTitle}>This week, handled by Korana</div>
+                  <div className={s.cardTitle}>This week, handled by Korana.ai</div>
                   <div className={s.cardSub}>May 17 — May 23</div>
                 </div>
                 <span className="tag" style={{ fontSize: 11.5, height: 24 }}>
@@ -236,7 +236,7 @@ export function WebDashboard() {
             <div className={s.cardH}>
               <div>
                 <div className={s.cardTitle}>Activity</div>
-                <div className={s.cardSub}>Live stream of what Korana is doing</div>
+                <div className={s.cardSub}>Live stream of what Korana.ai is doing</div>
               </div>
               <div style={{ display: "flex", gap: 8 }}>
                 <button className={`${s.chip} ${s.chipActive}`}>All</button>

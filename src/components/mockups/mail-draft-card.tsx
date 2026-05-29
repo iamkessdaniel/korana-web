@@ -7,7 +7,7 @@ export function MailDraftCard() {
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <div className={s.avatar}>AI</div>
           <div>
-            <div className={s.headTitle}>Korana drafted a reply</div>
+            <div className={s.headTitle}>Korana.ai drafted a reply</div>
             <div className={s.headMeta}>To: Sarah Chen · Re: Q3 proposal · 2 min ago</div>
           </div>
         </div>

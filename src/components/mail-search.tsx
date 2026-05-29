@@ -54,7 +54,7 @@ export function MailSearch() {
             Find the thread <span className="serif-italic">you&nbsp;barely&nbsp;remember.</span>
           </h2>
           <p className={s.sub}>
-            Describe what you&rsquo;re looking for in plain language. Korana searches subjects, bodies, attachments, and extracted data &mdash; and returns results ranked by relevance, not date.
+            Describe what you&rsquo;re looking for in plain language. Korana.ai searches subjects, bodies, attachments, and extracted data &mdash; and returns results ranked by relevance, not date.
           </p>
         </div>
 

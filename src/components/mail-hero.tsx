@@ -13,7 +13,7 @@ export function MailHero() {
       <div className={`container ${s.inner}`}>
         <div className={s.eyebrow}>
           <MailEnvelope size={14} />
-          <span>Korana AI Mail — $1/mo per mailbox</span>
+          <span>Korana.ai Mail — $1/mo per mailbox</span>
         </div>
 
         <h1 className={`display ${s.title}`}>
@@ -35,7 +35,7 @@ export function MailHero() {
           </a>
         </div>
 
-        <div className={s.replaces} aria-label="Problems Korana Mail solves">
+        <div className={s.replaces} aria-label="Problems Korana.ai Mail solves">
           <span className={s.replacesLabel}>Replaces</span>
           <span className={s.replacesChip}>Gmail clutter</span>
           <span className={s.replacesChip}>Unread anxiety</span>

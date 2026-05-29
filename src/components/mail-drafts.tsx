@@ -11,7 +11,7 @@ export function MailDrafts() {
             The reply is ready <span className="serif-italic">before</span> you open the thread.
           </h2>
           <p className={s.sub}>
-            Korana reads every inbound message, writes a reply in your voice, and queues it. Routine replies send themselves. Important ones wait for your tap.
+            Korana.ai reads every inbound message, writes a reply in your voice, and queues it. Routine replies send themselves. Important ones wait for your tap.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export function MailDrafts() {
                   <div className={s.notifIcon}>
                     <div className={s.notifDot} />
                   </div>
-                  <div className={s.notifApp}>Korana Mail</div>
+                  <div className={s.notifApp}>Korana.ai Mail</div>
                   <div className={s.notifTime}>now</div>
                 </div>
                 <div className={s.notifTitle}>AI Draft ready &mdash; Sarah Chen</div>

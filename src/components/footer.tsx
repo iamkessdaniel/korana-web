@@ -18,7 +18,7 @@ export function Footer({ hideCta }: { hideCta?: boolean } = {}) {
             <span className="serif-italic">building.</span>
           </h2>
           <p className={s.ctaSub}>
-            Let Korana run the rest. The work that used to eat your evenings finishes itself in the background.
+            Let Korana.ai run the rest. The work that used to eat your evenings finishes itself in the background.
           </p>
           <div className={s.ctaForm}>
             <CtaForm />
@@ -67,7 +67,7 @@ export function Footer({ hideCta }: { hideCta?: boolean } = {}) {
 
           <div className={s.ftBottom}>
             <div className={s.ftLegal}>
-              &copy; 2026 Korana, Inc. · All work, less work.
+              &copy; 2026 Korana.ai, Inc. · All work, less work.
             </div>
             <div className={s.ftSocials}>
               <a href="#" aria-label="Twitter">

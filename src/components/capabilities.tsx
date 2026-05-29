@@ -19,7 +19,7 @@ export function Capabilities() {
     <section className={`${s.cap} section`}>
       <div className="container">
         <div className={s.head}>
-          <div className="eyebrow">What Korana does</div>
+          <div className="eyebrow">What Korana.ai does</div>
           <h2 className={`display ${s.h2}`}>
             Eight jobs.<br />
             <span className="serif-italic">One chief of staff.</span>

@@ -27,7 +27,7 @@ export function MailNav() {
       <header className={`${s.nav} ${scrolled ? s.scrolled : ""}`}>
         <div className={`container ${s.inner}`}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <a href="/" className={s.brand} aria-label="Korana home">
+            <a href="/" className={s.brand} aria-label="Korana.ai home">
               <span className={s.mark} aria-hidden>
                 <Logo size={28} />
               </span>

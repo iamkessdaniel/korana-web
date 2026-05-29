@@ -39,7 +39,7 @@ const EMAILS = [
     from: "Alex Rivera",
     avatar: "AR",
     avatarBg: "#2d6b4e",
-    subject: "Intro \u2014 Marker x Korana",
+    subject: "Intro \u2014 Marker x Korana.ai",
     snippet: "Wanted to connect you two...",
     time: "1h",
     unread: true,
@@ -106,7 +106,7 @@ export function MailInboxMockup() {
               </svg>
             </div>
             <div>
-              <div className={s.sideBrand}>Korana Mail</div>
+              <div className={s.sideBrand}>Korana.ai Mail</div>
               <div className={s.sideEmail}>you@company.com</div>
             </div>
           </div>
@@ -301,7 +301,7 @@ export function MailInboxMockup() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
               <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
             </svg>
-            <span className={s.cmdText}>Ask Korana anything...</span>
+            <span className={s.cmdText}>Ask Korana.ai anything...</span>
             <kbd className={s.kbd}>/</kbd>
           </div>
         </div>

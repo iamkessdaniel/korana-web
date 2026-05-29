@@ -7,7 +7,7 @@ const STEPS = [
     n: "1",
     icon: <AtSign size={20} />,
     title: "Connect your domain",
-    desc: "Point your MX records to Korana, or keep Gmail/Outlook and set up forwarding. Either way, two minutes.",
+    desc: "Point your MX records to Korana.ai, or keep Gmail/Outlook and set up forwarding. Either way, two minutes.",
   },
   {
     n: "2",
@@ -48,7 +48,7 @@ export function MailHowItWorks() {
         </div>
 
         <div className={s.timelineWrap}>
-          <div className={s.timelineLabel}>An email&apos;s journey through Korana</div>
+          <div className={s.timelineLabel}>An email&apos;s journey through Korana.ai</div>
           <MailTimeline />
         </div>
       </div>

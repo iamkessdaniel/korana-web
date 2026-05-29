@@ -15,7 +15,7 @@ export function ChatWidget({ large, className }: ChatWidgetProps) {
         </div>
         <div>
           <div className={s.name}>
-            Korana <span className={s.online} />
+            Korana.ai <span className={s.online} />
           </div>
           <div className={s.sub}>AI Chief of Staff</div>
         </div>
@@ -36,7 +36,7 @@ export function ChatWidget({ large, className }: ChatWidgetProps) {
 
       <div className={s.bar}>
         <span className={s.sparkle}><Sparkle size={14} /></span>
-        <span className={s.placeholder}>Ask Korana anything…</span>
+        <span className={s.placeholder}>Ask Korana.ai anything…</span>
         <span className={s.mic}><Mic size={13} /></span>
         <span className={s.send}><Send size={12} /></span>
       </div>

@@ -35,10 +35,10 @@ export function Approvals() {
           <div className="eyebrow">The dynamic</div>
           <h2 className={`display ${s.h2}`}>
             You approve <span className="serif-italic">what matters.</span><br />
-            Korana does the rest.
+            Korana.ai does the rest.
           </h2>
           <p className={s.sub}>
-            Korana drafts, runs, and finishes. The only thing that comes to you is a small
+            Korana.ai drafts, runs, and finishes. The only thing that comes to you is a small
             handful of decisions a day — each with full context, a recommendation, and one tap to approve.
           </p>
         </div>
@@ -62,7 +62,7 @@ export function Approvals() {
               <div className={s.empty}>
                 <div style={{ fontSize: 48, fontFamily: "var(--font-display)", color: "var(--ink)" }}>0</div>
                 <div className="serif-italic" style={{ fontSize: 22, color: "var(--ink-2)", marginTop: 4 }}>Inbox zero, by 9am.</div>
-                <div style={{ fontSize: 13, color: "var(--ink-3)", marginTop: 8 }}>Korana handled the rest of today already.</div>
+                <div style={{ fontSize: 13, color: "var(--ink-3)", marginTop: 8 }}>Korana.ai handled the rest of today already.</div>
               </div>
             )}
             {items.map((item) => (

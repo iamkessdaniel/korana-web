@@ -3,7 +3,7 @@ import s from "./mail-phone-inbox.module.css";
 const EMAILS = [
   { from: "Sarah Chen", subject: "Re: Q3 proposal", snippet: "Can we add the pricing table?", time: "2m", tag: "Decision", tagColor: "var(--accent)" },
   { from: "Stripe", subject: "Payout completed", snippet: "$4,280.00 deposited to your account", time: "14m", tag: "FYI", tagColor: "var(--info)" },
-  { from: "Alex Rivera", subject: "Intro — Marker x Korana", snippet: "Hey! Wanted to connect you two...", time: "28m", tag: "Reply", tagColor: "var(--accent)" },
+  { from: "Alex Rivera", subject: "Intro — Marker x Korana.ai", snippet: "Hey! Wanted to connect you two...", time: "28m", tag: "Reply", tagColor: "var(--accent)" },
   { from: "GitHub", subject: "[korana/api] PR #412 merged", snippet: "Fix: rate limiter edge case on batch...", time: "1h", tag: "Noise", tagColor: "var(--ink-3)" },
   { from: "Aanya Reddy", subject: "Invoice follow-up", snippet: "Just checking if you received #138?", time: "1h", tag: "Urgent", tagColor: "#b53d2b" },
 ];
@@ -56,7 +56,7 @@ export function MailPhoneInbox() {
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
           <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
         </svg>
-        <span className={s.cmdText}>Ask Korana...</span>
+        <span className={s.cmdText}>Ask Korana.ai...</span>
         <span className={s.cmdKbd}>⌘</span>
       </div>
     </div>

@@ -13,7 +13,7 @@ const SMART_VIEWS = [
 const EMAILS = [
   { from: "Sarah Chen", avatar: "SC", avatarBg: "#c14a26", subject: "Re: Q3 proposal", time: "2m", tag: "Decision needed", tagColor: "var(--accent)", selected: true },
   { from: "Aanya Reddy", avatar: "AR", avatarBg: "#b53d2b", subject: "Invoice follow-up", time: "28m", tag: "Invoice #138 overdue", tagColor: "var(--warning)", selected: false },
-  { from: "Alex Rivera", avatar: "AR", avatarBg: "#2d6b4e", subject: "Intro — Marker x Korana", time: "1h", tag: "Intro — reply suggested", tagColor: "var(--info)", selected: false },
+  { from: "Alex Rivera", avatar: "AR", avatarBg: "#2d6b4e", subject: "Intro — Marker x Korana.ai", time: "1h", tag: "Intro — reply suggested", tagColor: "var(--info)", selected: false },
 ];
 
 export function MailAiMockup() {
@@ -48,7 +48,7 @@ export function MailAiMockup() {
               </svg>
             </div>
             <div>
-              <div className={s.sideBrand}>Korana Mail</div>
+              <div className={s.sideBrand}>Korana.ai Mail</div>
               <div className={s.sideEmail}>you@company.com</div>
             </div>
           </div>
@@ -159,7 +159,7 @@ export function MailAiMockup() {
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                   <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
                 </svg>
-                Korana AI
+                Korana.ai
               </span>
               <span className={s.aiPanelBadge}>2 actions</span>
             </div>
@@ -195,7 +195,7 @@ export function MailAiMockup() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className={s.cmdIcon}>
               <path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z" fill="currentColor"/>
             </svg>
-            <span className={s.cmdText}>Ask Korana anything...</span>
+            <span className={s.cmdText}>Ask Korana.ai anything...</span>
             <kbd className={s.kbd}>/</kbd>
           </div>
         </div>

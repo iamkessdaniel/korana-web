@@ -26,7 +26,7 @@ export function Channels() {
         <div className={s.head}>
           <div className="eyebrow">Channels</div>
           <h2 className={`display ${s.h2}`}>
-            Wherever you work, <span className="serif-italic">Korana shows up.</span>
+            Wherever you work, <span className="serif-italic">Korana.ai shows up.</span>
           </h2>
           <p className={s.sub}>
             Get updates in your favorite chat apps. Approve from your phone in the cab.
@@ -82,7 +82,7 @@ export function Channels() {
                 <li><CheckSm size={11} /> Morning brief delivered as a push notification</li>
                 <li><CheckSm size={11} /> Voice-first — &ldquo;send the Acme reply, decline lunch&rdquo;</li>
                 <li><CheckSm size={11} /> Swipe to approve, hold to record reply</li>
-                <li><CheckSm size={11} /> Offline-safe — Korana keeps going, syncs when you&apos;re back</li>
+                <li><CheckSm size={11} /> Offline-safe — Korana.ai keeps going, syncs when you&apos;re back</li>
               </ul>
             </div>
             <div className={`${s.visual} ${s.visualMobile}`}>

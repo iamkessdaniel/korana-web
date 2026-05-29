@@ -10,14 +10,14 @@ export function MailLedger() {
             Your money, <span className="serif-italic">tracked&nbsp;automatically.</span>
           </h2>
           <p className={s.sub}>
-            Korana reads confirmation emails, invoices, and booking threads the moment they arrive and builds a live dashboard. No manual entry. No spreadsheets. Just open the Ledger.
+            Korana.ai reads confirmation emails, invoices, and booking threads the moment they arrive and builds a live dashboard. No manual entry. No spreadsheets. Just open the Ledger.
           </p>
         </div>
 
         <div className={s.layout}>
           {/* Left: email source */}
           <div className={s.source}>
-            <div className={s.sourceLabel}>Korana reads this email</div>
+            <div className={s.sourceLabel}>Korana.ai reads this email</div>
             <div className={s.emailCard}>
               <div className={s.emailFrom}>From: billing@notion.so</div>
               <div className={s.emailSubject}>Your invoice for May 2026</div>

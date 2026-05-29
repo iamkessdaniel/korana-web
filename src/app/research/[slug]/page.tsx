@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Korana Research`,
+    title: `${post.title} — Korana.ai Research`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://korana.ai/research/${post.slug}`,
       type: "article",
       publishedTime: post.date,
-      authors: ["Korana Research"],
+      authors: ["Korana.ai Research"],
       section: post.category,
     },
     twitter: {
@@ -97,12 +97,12 @@ function ArticleSchema({ post }: { post: Post }) {
     dateModified: post.date,
     author: {
       "@type": "Organization",
-      name: "Korana Research",
+      name: "Korana.ai Research",
       url: "https://korana.ai/research",
     },
     publisher: {
       "@type": "Organization",
-      name: "Korana",
+      name: "Korana.ai",
       url: "https://korana.ai",
       logo: {
         "@type": "ImageObject",
@@ -126,7 +126,7 @@ function ArticleSchema({ post }: { post: Post }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Korana", item: "https://korana.ai" },
+      { "@type": "ListItem", position: 1, name: "Korana.ai", item: "https://korana.ai" },
       { "@type": "ListItem", position: 2, name: "Research", item: "https://korana.ai/research" },
       { "@type": "ListItem", position: 3, name: post.title, item: `https://korana.ai/research/${post.slug}` },
     ],
@@ -168,7 +168,7 @@ export default async function ArticlePage({ params }: Props) {
             <h1 className={`display ${s.articleTitle}`}>{post.title}</h1>
             <p className={s.articleSubtitle}>{post.subtitle}</p>
             <div className={s.articleMeta}>
-              <span>Korana Research</span>
+              <span>Korana.ai Research</span>
               <span className={s.metaDot} />
               <time dateTime={post.date}>{formatDate(post.date)}</time>
               <span className={s.metaDot} />
@@ -197,7 +197,7 @@ export default async function ArticlePage({ params }: Props) {
               Run your back office on <em>autopilot.</em>
             </h3>
             <p className={s.ctaBoxSub}>
-              Join the waitlist for Korana — the AI Chief of Staff for growing companies.
+              Join the waitlist for Korana.ai — the AI Chief of Staff for growing companies.
             </p>
             <div className={s.ctaBoxForm}>
               <CtaForm />
@@ -207,7 +207,7 @@ export default async function ArticlePage({ params }: Props) {
 
         <section className={s.related}>
           <div className="container">
-            <p className={s.relatedH}>More from Korana Research</p>
+            <p className={s.relatedH}>More from Korana.ai Research</p>
             <div className={s.relatedGrid}>
               {related.map((p) => (
                 <ResearchCard key={p.slug} post={p} />

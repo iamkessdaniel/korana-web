@@ -49,7 +49,7 @@ export function Hero() {
       <div className={`container ${s.inner}`}>
         <div className={s.eyebrow}>
           <span className={`pulse-dot ${s.eyebrowDot}`} aria-hidden />
-          <span>Korana — Your AI Chief of Staff</span>
+          <span>Korana.ai — Your AI Chief of Staff</span>
         </div>
 
         <h1 className={`display ${s.title}`}>
@@ -83,7 +83,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className={s.replaces} aria-label="Roles Korana replaces">
+        <div className={s.replaces} aria-label="Roles Korana.ai replaces">
           <span className={s.replacesLabel}>Replaces</span>
           <span className={s.replacesChip}>Bookkeeper</span>
           <span className={s.replacesChip}>EA</span>
@@ -125,7 +125,7 @@ export function Hero() {
             </div>
             <div className={s.briefHeadline}>
               <span className="serif-italic" style={{ fontSize: 28, lineHeight: 1.1, color: "var(--ink)" }}>
-                This week, Korana handled
+                This week, Korana.ai handled
               </span>
               <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginTop: 10 }}>
                 <span style={{ fontFamily: "var(--font-display)", fontSize: 64, lineHeight: 1, color: "var(--ink)" }}>147</span>

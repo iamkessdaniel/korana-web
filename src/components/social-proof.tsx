@@ -34,7 +34,7 @@ export function SocialProof() {
 
         <div className={s.bar}>
           {[
-            { n: "2.4M+", l: "tasks finished by Korana" },
+            { n: "2.4M+", l: "tasks finished by Korana.ai" },
             { n: "11.4h", l: "reclaimed per founder per week" },
             { n: "96%", l: "tasks completed without escalation" },
             { n: "~8s", l: "median time to approve" },

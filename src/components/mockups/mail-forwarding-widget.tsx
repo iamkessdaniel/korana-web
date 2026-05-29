@@ -17,7 +17,7 @@ export function MailForwardingWidget() {
         <span className={s.arrow}>&rarr;</span>
         <span className={s.dest}>
           <span className={s.destDot} />
-          Korana Mail
+          Korana.ai Mail
         </span>
       </div>
     </div>

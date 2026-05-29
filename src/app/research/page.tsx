@@ -6,11 +6,11 @@ import { ResearchCard } from "@/components/research-card";
 import s from "./research.module.css";
 
 export const metadata: Metadata = {
-  title: "Korana Research — Ideas on AI, Work, and the Future of Business",
+  title: "Korana.ai Research — Ideas on AI, Work, and the Future of Business",
   description:
-    "Thought leadership from Korana on AI-native companies, the AI Chief of Staff, intelligent email, and the future of work.",
+    "Thought leadership from Korana.ai on AI-native companies, the AI Chief of Staff, intelligent email, and the future of work.",
   openGraph: {
-    title: "Korana Research",
+    title: "Korana.ai Research",
     description: "Ideas on AI, work, and the future of business.",
     url: "https://korana.ai/research",
   },
@@ -21,13 +21,13 @@ function CollectionSchema() {
   const ld = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Korana Research",
+    name: "Korana.ai Research",
     description:
       "Thought leadership on AI-native companies, the AI Chief of Staff, intelligent email, and the future of work.",
     url: "https://korana.ai/research",
     publisher: {
       "@type": "Organization",
-      name: "Korana",
+      name: "Korana.ai",
       url: "https://korana.ai",
     },
     mainEntity: {
@@ -61,7 +61,7 @@ export default function ResearchPage() {
       <main>
         <section className={s.hero}>
           <div className="container">
-            <p className={s.eyebrow}>Korana Research</p>
+            <p className={s.eyebrow}>Korana.ai Research</p>
             <h1 className={`display ${s.h1}`}>
               Ideas on AI, work, and<br />
               <em>the future of business.</em>
