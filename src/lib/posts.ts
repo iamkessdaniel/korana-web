@@ -635,8 +635,8 @@ export const POSTS: Post[] = [
 
   // ── 15 ────────────────────────────────────────────────
   {
-    slug: "unleashing-the-ai-in-email",
-    title: "Unleashing the AI in Email",
+    slug: "how-korana-ai-unleashes-the-ai-in-email",
+    title: "How Korana.ai Unleashes the AI in Email",
     subtitle: "We tried adding AI to everything. It turns out email is where it makes the most difference — and here's the structural reason why.",
     date: "2026-04-14",
     category: "Product",
@@ -1137,8 +1137,8 @@ export const POSTS: Post[] = [
 
   // ── 26 ────────────────────────────────────────────────
   {
-    slug: "how-korana-mail-deconstructs-email",
-    title: "How Korana.ai Mail Deconstructs Email",
+    slug: "how-korana-ai-deconstructs-email",
+    title: "How Korana.ai Deconstructs Email",
     subtitle: "Every message you receive is several things pretending to be one thing. We tear them apart.",
     date: "2026-02-06",
     category: "Product",
